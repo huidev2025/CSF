@@ -82,12 +82,16 @@ csf在github上的发布和维护
   4. **GitHub SEO 战略全景**：梳理 4 条路径（About / Topics / README 顶部关键词 / 外部信号 + 内容飞轮）。总原则：嫌接钩子（RAG/agent/prompt-engineering/…）+ 品牌锚点（Pang Principle/CSF）+ 品质贯穿（不是更便宜、是更对）。
   5. **20 个 Topics 清单**（已填）：ai-collaboration / human-ai-collaboration / llm / llm-engineering / prompt-engineering / context-engineering / agentic-workflow / ai-agents / multi-agent / **rag-alternative** / **no-rag** / ai-development / ai-methodology / software-engineering / dogfooding / manifesto / **pang-principle** / **csf** / collaboration-specification-framework / chinese。
   6. **README 顶部英文 tagline 重写**（`3527270`）：从 2 个关键词扩到 6 个（human-AI collaboration / LLM / RAG / agent orchestration / prompt engineering / Pang Principle），核心表达 “unnecessary, not unavailable”——语法上出「超越，不是缺失」。
+  7. **essays/ 上线**（`3a34ceb`）：把 csf-222 六篇原稿剥掉 frontmatter 直接搬过来，加了一个朴素索引页，根 README 加入入口。**核心原则确立：SEO 只动元数据层（Topics/About/tagline），思想原稿一字不为 SEO 改。**
+  8. **GitHub Pages 开启**（`bf921bc`）：A 方案（默认 Jekyll，Deploy from `main`），站点 `https://huidev2025.github.io/CSF/`，README 顶部加网页阅读入口；不上独立域名（让需求自己长出来）。
 - **关键选择**：
   - SEO 不走「造词」线路，走「嫌接 + 锚点」双重：让读者从熟词进来，从你的词出去。
   - 中文那句 tagline **不动** ——中文检索靠外部渠道（知识星球 / V2EX / 即刻）承担，不占这个顶部窄通道。
   - **不制定“刷 star”设想**：GitHub 算法会识别异常。前 50 颗 star 必须靠真实读者。
-- **未推送**：无（所有类仓库内变更已 push）。本轮 Owner 将另开专题处理路径 ④ 外部信号；路径 ⑤ 首篇文章在 ④ 后接上。
-- **dlog_003**：本会话未产出，已顺延到下一个话题收尾时一并产出。
+  - **essays vs SEO 分层**：SEO 把对的人带到门口，essays 是他进门后看到的东西——两者不能互相污染。
+  - **专栏文章发在哪里？这个问题已答**：默认载体是仓库内 `essays/` + GitHub Pages，外部平台（Substack / 知识星球 / V2EX）只做引流。
+- **未推送**：无。本轮 Owner 将另开专题处理路径 ④ 外部信号；路径 ⑤ 首篇文章在 ④ 后接上。
+- **本轮日志**：未产出 `dlog_004`（v1.0.0 + SEO + essays + Pages 主题），顺延到下次会话开场或下一个话题收尾时补。
 
 ---
 
@@ -95,7 +99,7 @@ csf在github上的发布和维护
 
 - **目的**：Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章）落地。
 
-- **Owner 在本轮末得问题**：未来专栏文章发在哪里？仓库内 vs 外部平台。**下一轮详细诨**。
+- **当前阶段定位**：仓库可控的事情**全部到位**——v1.0.0 已发布，元数据层 SEO（路径 ①②③）就绪，essays 与 Pages 已上线。剩下的全是「对外节奏」——Owner 主导，AI 配合。
 
 - **后续工作项**：
 
@@ -105,11 +109,15 @@ csf在github上的发布和维护
   4. ~~**内容预告**~~ — 已简化为 README 路线图下「未来」一段。
   5. ~~**v1.0.0 首个公开发布**~~ — 完成（tag + Release）。
   6. ~~**SEO 路径 ①②③**~~ — 完成（About / Topics / README tagline）。
-  7. **SEO 路径 ④ 外部信号**——Owner 另开专题处理。备选动作：知识星球开张 / Hacker News Show HN / V2EX-即刻-少数派 中文社区 / 给 awesome-* 类列表提 PR。
-  8. **SEO 路径 ⑤ 首篇专栏文章**——题目未定，5 个备选：*Why your RAG keeps growing* / *Past prompt engineering* / *395 sessions on Lost in the Middle* / *The Pang Principle one-pager* / *CSF dogfoods this repo*。
-  9. **csf-lite 导读页**（上轮遗留，可选）。
+  7. ~~**essays/ 上线**~~ — 完成（6 篇原稿 + 索引页）。
+  8. ~~**GitHub Pages**~~ — 完成（A 方案，无独立域名）。
+  9. **SEO 路径 ④ 外部信号**——Owner 另开专题处理。备选动作：知识星球开张 / Hacker News Show HN / V2EX-即刻-少数派 中文社区 / 给 awesome-* 类列表提 PR。
+  10. **SEO 路径 ⑤ 首篇专栏文章**——载体已定（仓库内 essays/ + Pages），题目未定，5 个备选：*Why your RAG keeps growing* / *Past prompt engineering* / *395 sessions on Lost in the Middle* / *The Pang Principle one-pager* / *CSF dogfoods this repo*。在路径 ④ 之后接上。
+  11. **`dlog_004` 补档**——session 6 真实工作日志（v1.0.0 + SEO + essays + Pages）。下次开场或顺手时产出。
+  12. **csf-lite 导读页**（上轮遗留，可选）。
+  13. **中文文件名 URL 编码**：Pages 上线后若发现某个中文链接 404，再决定是改 ASCII 还是配 `_config.yml` permalink。**不挂就不动**。
 
-- **下轮开场必答**：“专栏文章发在哪里？”这个问题已被 Owner 提出。需提供平台对比（仓库内 articles/ / GitHub Pages / Substack / 知识星球 / 个人站点 / 多点同步）+ 推荐。
+- **下轮开场建议**：先问 Owner 这一段时间路径 ④ 进展如何（知识星球 / HN / V2EX 等动作触发了哪些），再据此决定路径 ⑤ 题目和切入角度。
 
 - **需要的资料**：现有仓库内容 + 「备忘·理论参考资料」。
 
@@ -122,7 +130,8 @@ csf在github上的发布和维护
 - **Owner 邮箱**：dapangangang@gmail.com（商用咨询 / 交流使用，必要时在对外文案中使用）
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
-- **未同步到 GitHub 的事项**：本轮本地仅调整 context.md（§C/§D + 进度），还未 push。本轮未产出 dlog_003，顺延。
+- **GitHub Pages**：A 方案（默认 Jekyll，Deploy from `main`），`https://huidev2025.github.io/CSF/`。中文文件名一般可访问，遇到 404 再处理。
+- **未同步到 GitHub 的事项**：本轮 §C/§D/备忘的本次更新待推。`dlog_004`（session 6）顺延。
 
 ---
 
