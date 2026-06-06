@@ -69,10 +69,6 @@ CSF 不是单一文档，是一套**有纵深、已迭代到第三版**的体系
 
 **csf-full 是什么**：约 **60 个**核心规程与经验文件构成的**工程化人机协作管理系统**——四层工程架构（语义管理 / 协作通信 / 质量保障 / 演化系统）+ 三角色协作（Owner / 参谋长 / 开发者）+ W-协议三档质检 + E8 五阶段经验升迁 + D3 三谱系知识路由。
 
-**为什么不公开**：它需要根据研发团队的真实场景定制并陪伴落地——不是产品，是协作。
-
-**CSF 真正的价值不是"不写代码也能开发"**——那只是它能力的副产品。CSF 的核心价值是：**让人机协作变得规范、质量可控、效率提升**。当工程化进一步成熟后，它能支撑大规模产品的设计和开发管理；当下的状态，已经足以直接支持中小研发团队使用。
-
 ### 三个工程级设计：放在行业坐标里看
 
 CSF v3 在 **不写一行代码、纯文本** 的前提下，构建了一个 **高内聚、低耦合的软件工程管理系统**。其核心由三个工程设计支撑：
@@ -185,15 +181,6 @@ collaboration management system** — a four-layer architecture
 protocol (Owner / Chief-of-Staff / Developer) + the W-protocol (three tiers
 of verification) + the E8 experience-promotion pipeline + the D3
 knowledge-routing system.
-
-**Why it is not public**: it has to be tailored and walked into your team.
-It is collaboration, not a product.
-
-**The real value of CSF is not "ship without writing code"** — that is a
-side-effect. The real value is making human–AI collaboration **regulated,
-quality-controllable, and more efficient**. With further maturation it can
-support large-scale product design and engineering management; in its
-current state it is already directly usable by SME engineering teams.
 
 ### Three engineering pillars — placed against the industry
 
