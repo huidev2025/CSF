@@ -49,6 +49,9 @@ csf在github上的发布和维护
 - [x] typo 修复：README 里一次「乒」、本轮意外的「吓」均已修为「乓」
 - [x] 联系说明：CONTACT.md（中英双栏）、assets/zsxq-qrcode.jpg（知识星球二维码）、README 联系段重写为短入口
 - [x] _dlog/ 决定公开（作为对外示范的一部分，计划公开 dlog_001/002/003）
+- [x] README 重定位：「CSF 全景 / The CSF Stack」三层表格 + 三个工程级设计支柱 + 行业对照（中英同步）
+- [x] 项目全景图 + 任务红点截图进 README（「看图说话」小节 / Look at it）、文件名改为 ASCII：assets/project-panorama-and-red-dot.png
+- [x] Manifesto 改名：Manifesto-v3-You-Are-Fighting-the-Wrong-War.md（消歧义）
 - [ ] 中文引言文件名是否保留原名（未决）
 - [ ] 小白用户上手指引（QUICKSTART / FAQ / 示例，中英文）
 - [ ] 内容预告（后期进阶路线）
@@ -63,31 +66,31 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-06（第三轮对话，以「联系说明 + 首次集中 push」为主轴）
+- **日期**：2026-06-06（第四轮对话，以「README 重定位 + 项目全景图为活证据」为主轴）
 - **做了什么**：
-  1. 确认主转化落地点：中文 → 知识星球「一个人走」（付费社群，包含 csf-lite、进阶经验、案例分享）；英文 → 邮箱优先 + GitHub Issues，知识星球作为 optional 补充。
-  2. 产出 `CONTACT.md`（中英双栏）：中文区诚实标出「付费社群」并说明动机；英文区明说「中文 + WeChat」两道门槛，不强推。
-  3. 图片归位：`_dlog/知识星球-一个人走-github.jpg` 复制为 `assets/zsxq-qrcode.jpg`（原图作底稿保留）。
-  4. README 代表性修改：「联系」段重写为短入口指向 CONTACT.md；仓库结构树补上 CONTACT.md / Manifesto / assets/；末尾 Contact 行加链接。
-  5. 决定 `_dlog/` 公开作为示范；计划公开三份：dlog_001/002 已存、dlog_003 在本会话收尾时产出。
-  6. 隐私清理：context.md 中 `huiGiter`（本地默认 GitHub 身份）提及已移除。
-  7. 集中 push：本轮与上两轮未推变更一起 push（Manifesto、How to cite、attribution标识行、CONTACT、assets、联系段重写、_dlog 公开）。
-- **结论**：联系路径中英文各自明确；示范足迹（_dlog）从本轮起进入公开表达。
+  1. 两个问题讨论：（小）Manifesto 文件名歧义→重命名为 Manifesto-v3-You-Are-Fighting-the-Wrong-War.md（`git mv` 保史）；（大）如何「亮肜肉」让 csf-full 能变现。
+  2. 回看 plan-csf-v2/context.md，修正表达中「1 人无代码」的单一卖点，重新定位 CSF 为「人机协作规范化、质量可控、效率提升」的工程级体系。
+  3. README 大重写「CSF 全景 / The CSF Stack」中英两段：三层表格（Manifesto / csf-minimal / csf-lite-full）+ 三个工程设计支柱（Self-Sustaining / Hot-Cold Separation / Multi-Role Physical Isolation）+ 行业对照（CrewAI / AutoGen / Lost in the Middle）+ 事实表 + 边界。
+  4. “已被证明的事情”从 2 项增至 4 项（Owner 手动补 #3/#4），英文同步补齐。
+  5. 项目全景图 + 任务红点截图加进 README，中英各一小节。原名含「中文 + + 空格」→改为 `assets/project-panorama-and-red-dot.png`（避 URL 编码风险）。图说明采用 Owner 原话「AI 自己维护、给自己看的项目状态」，三维度（位置 / 来路 / 去向）。
+  6. 样本量诚实化：删除中英两处「数量级 / order of magnitude」描述，换为描述性提法（「AI 不在对话中互相启动幻觉，人不在跳裁中被迫仲裁」）。
+  7. 集中 push为一个 commit（`4f47275`）：4 files changed, 309 insertions(+), 7 deletions(-)。
+- **结论**：README 从「会说会叫」进化为「能拿出工程证据」；项目全景图是其中最关键的一张活证据。
 
 ---
 
 ## §D 下次对话
 
-- **目的**：走完剩下两项对外资产（小白上手指引 / 内容预告）。
+- **目的**：启动「小白上手指引」（Owner 已定为下一个话题）。
 
 - **Owner 预告的后续工作项**：
 
   1. ~~**英文版宣言**~~ — 已完成首版。
   2. ~~**社交媒体与联系说明**~~ — 已交付（CONTACT.md + README 联系段）。
-  3. **小白用户上手指引**（中英文）。主题：“只要有基础沟通能力 + 好想法就能用”；重点包含“给非中文用户一个快速翻译并理解案例的说明”。
+  3. **小白用户上手指引**（中英文）——**下一个话题**。主题：“只要有基础沟通能力 + 好想法就能用”；重点包含“给非中文用户一个快速翻译并理解案例的说明”。开场需 Owner 决定「面向谁讲」（偏产品经理 / 偏开发者 / 偏货主 / 或全部分层）。
   4. **内容预告**。后期会在仓库中陆续提供的进阶内容。
 
-- **建议下次开场**：Owner 指定先做 3 还是 4。推荐 4 → 3（4 是路线图类轻资产、可直接挂在 README；3 是重头戏、需决定「面向谁讲」）。如需先产出 dlog_003，本轮收尾时产出。
+- **建议下次开场**：Owner 已选「先做 3」。开场先问「面向谁讲」，再定调、定长度、定交付件（QUICKSTART / FAQ / 示例）。如需先产出 dlog_003，本轮收尾时产出。
 
 - **需要的资料**：现有仓库内容 + 下面「备忘·理论参考资料」中记录的原始文件。小白上手指引需要明确「面向谁讲」（偏产品经理 / 偏开发者 / 偏货主）。
 
@@ -100,7 +103,7 @@ csf在github上的发布和维护
 - **Owner 邮箱**：dapangangang@gmail.com（商用咨询 / 交流使用，必要时在对外文案中使用）
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
-- **未同步到 GitHub 的事项**：本轮已集中 push，清空。
+- **未同步到 GitHub 的事项**：本轮已 push（4f47275），清空。本轮未产出 dlog_003，顺延到下一个话题收尾时产出（将记录：Manifesto 改名 + README 重定位 + 全景图进场 + 小白指引开展）。
 
 ---
 
