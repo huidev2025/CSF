@@ -41,10 +41,11 @@ csf在github上的发布和维护
 - [x] 引言 v3 文章
 - [x] 仓库根 README 第一版
 - [x] git 初始化 + 首次推送到 https://github.com/huidev2025/CSF
+- [x] LICENSE 选型：CC BY-NC 4.0，README 有补充说明（个人/创业者免费 + 商用联系）
 - [ ] 中英文双语版本安排（目录结构 / 命名）
-- [ ] LICENSE 选型
 - [ ] 引言文件名是否保留原名
 - [ ] 进阶版本：csf-lite / csf-full
+- [ ] 小白用户帮助文档（QUICKSTART / FAQ / 示例）
 
 **注意事项**：
 - 这个仓库是对外门面，所有对外文案（引言 / README / 语气）修改前需 Owner 确认后再推送。
@@ -56,24 +57,23 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-06
+- **日期**：2026-06-06（同一会话，多轮渐进）
 - **做了什么**：
-  1. 通读 csf-222 六篇 + csf-v3-394 总览，建立对 CSF 理论体系的认知。
-  2. 创建仓库骨架：根 README.md、.gitignore。
-  3. git init -b main → 首次 commit（7 个文件）→ 添加远程 origin。
-  4. 清理 Windows 凭据管理器里的 huiGiter 旧凭据，OAuth 重新登录 huidev2025。
-  5. 远程原有 GitHub stub README 被覆盖 (--force-with-lease)。
-- **结论**：首版已发布到 https://github.com/huidev2025/CSF ，main 分支 commit `17d5003`。
+  1. 首版仓库发布到 https://github.com/huidev2025/CSF （commit `17d5003`）。
+  2. 调试 git 账号冲突：清理 huiGiter 旧凭据 → OAuth 重登 huidev2025 → force-push 覆盖 GitHub stub。
+  3. 讨论并确定 License：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费（但希望知会），企业商用需提前联系。
+  4. 创建 LICENSE 全文、更新 README 授权说明（中英双语）。
+- **结论**：仓库现在具备对外发布的基础要件：README / LICENSE / 引言 / 最小教学版。
 
 ---
 
 ## §D 下次对话
 
-- **目的**：让仓库低门槛、原意完整、开始对外可讲。
+- **目的**：让仓库能被外国人看懂，并开始为小白用户阐释。
 - **建议先做**（二选一）：
-  - **路径 A（商定结构）**：中英文双语目录如何布局（`/zh/` + `/en/`？还是文件名后缀 `.zh.md` / `.en.md`？）、引言文件名是否改短、LICENSE 选型。
-  - **路径 B（先产出英文初稿）**：先翻译引言 + csf-minimal/README，结构问题边译边决。
-- **需要的资料**：无（现有仓库内容足够）。如要发起诨论，可参考 bang-v3\plan-csf-v2\csf-iteration\csf-v3-394\CSF 理论体系总览.md。
+  - **路径 A：双语结构决议**。选 `/zh/` + `/en/` 还是 `*.zh.md` / `*.en.md` 后缀？引言名是否改短？选定后一次调整到位。
+  - **路径 B：先产出英文初稿**（引言 + csf-minimal/README），翻译中发现的词汇不一致能反哺中文。
+- **需要的资料**：现有仓库内容足够。
 
 ---
 
@@ -81,7 +81,9 @@ csf在github上的发布和维护
 
 - **远程**：https://github.com/huidev2025/CSF （main，账号 huidev2025）
 - **本地路径**：d:\OneDrive\devSpace\csf\
-- **待决 LICENSE**：Owner 选了“暂不加”，README 底部标为 *License: 待定 / TBD*
-- **未同步到 GitHub 的事项**：无（本地 main 与 origin/main 持平）。
+- **Owner 邮箱**：dapangangang@gmail.com（商用咨询 / 交流使用，必要时在对外文案中使用）
+- **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
+- **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
+- **未同步到 GitHub 的事项**：（本轮提交后为空）
 
 <!-- 需要跨对话记住但不是当前在做的事 -->

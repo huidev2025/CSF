@@ -31,6 +31,7 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 ```
 csf/
 ├── README.md                     # 本文件
+├── LICENSE                       # CC BY-NC 4.0
 ├── 引言v3：...md                  # 对外引言（宣言）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
@@ -44,6 +45,7 @@ csf/
 
 - [x] 最小教学版（csf-minimal）
 - [x] 引言文章
+- [x] 发布授权（CC BY-NC 4.0）
 - [ ] 英文版（English translation）
 - [ ] 进阶版本：csf-lite / csf-full
 - [ ] 实践案例与社区反馈
@@ -52,11 +54,11 @@ csf/
 
 ## 联系
 
-由 **dapangangang** 在将近 400 次会话中开发并验证。想深入了解、有反馈、想交流——欢迎通过 GitHub Issues 联系。
+由 **dapangangang** 在将近 400 次会话中开发并验证。想深入了解、有反馈、想交流——欢迎通过 GitHub Issues 或邮箱 **dapangangang@gmail.com** 联系。
 
 ---
 
-## 乓定律
+## 乒定律
 
 > **公理**：自然语言表达所承载的信息量，远高于符号系统。
 >
@@ -66,4 +68,22 @@ csf/
 
 ---
 
-*License: 待定 / TBD*
+## 授权 / License
+
+本仓库的文档与文字内容采用 [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) 协议。
+
+- **个人、学术、非营利使用**：自由传播、翻译、改编，请保留署名（dapangangang）与原始链接。
+- **商业使用**（以营利为主要目的的产品、服务、企业内部工具、培训课程、咨询交付物等）：请提前联系作者。**不一定收费，但希望知道你是谁、用在哪里。**
+- **创业者**：免费。但还是希望你告诉我你在做什么——不是限制，是交朋友。
+- **不确定是否算商用**：发个 Issue 或邮件问一下就好。
+
+联系方式：**dapangangang@gmail.com** 或 GitHub Issues。
+
+---
+
+The textual content of this repository is licensed under [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/).
+
+- Personal, academic, non-profit use: free to share and adapt with attribution.
+- **Commercial use** requires permission — please reach out. Paid licensing is **not** the default; the goal is to know who is using it and how.
+- **Startups: free.** Just please tell me what you're doing — not a restriction, just to stay in touch.
+- Unsure whether your use is commercial? Open an issue or email **dapangangang@gmail.com**.
