@@ -25,6 +25,10 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 4. **[csf-minimal/context.md](csf-minimal/context.md)** —— 你可以直接复制使用的协作记忆模板
 5. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** —— A/B 实验设计，亲自感受差异
 
+想读思想原稿：
+
+6. **[essays/ — CSF 理论体系连载（6 篇）](essays/README.md)** —— 从公理到定位的完整推导链，深读者送这里
+
 > **第一次来？** 直接看 **[QUICKSTART.md](QUICKSTART.md)** 就够了。
 > **First time here?** Read **[QUICKSTART.md](QUICKSTART.md)** first.
 
@@ -42,6 +46,7 @@ csf/
 ├── Manifesto-v3-You-Are-Fighting-the-Wrong-War.md   # 英文版宣言
 ├── assets/                       # 对外资源（二维码等）
 ├── _dlog/                        # 公开的真实工作日志（协作示范）
+├── essays/                       # 思想原稿（CSF 理论体系 6 篇连载）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
     ├── context.md                # 给读者用的空白模板

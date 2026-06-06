@@ -57,8 +57,7 @@ csf在github上的发布和维护
 - [x] 首个公开 release：**v1.0.0**（annotated tag + GitHub Release页）
 - [x] GitHub SEO 路径 ①：**About description** （“works *with* LLM nature, not around it… make RAG and agent orchestration unnecessary. Home of the Pang Principle.”）
 - [x] GitHub SEO 路径 ②：**20 个 Topics 已填**（报接钩子 + 价值定位 + 品牌锚点三组）
-- [x] GitHub SEO 路径 ③：README 顶部英文 tagline 重写（嵌入 6 个关键词，「unnecessary, not unavailable」点明“超越不是缺失”）
-- [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
+- [x] GitHub SEO 路径 ③：README 顶部英文 tagline 重写（嵌入 6 个关键词，「unnecessary, not unavailable」点明“超越不是缺失”）- [x] **essays/ 上线**：CSF 理论体系 6 篇连载（来自 csf-222），去除 frontmatter，朴素索引页，根 README 加入口 —— **不为 SEO 改一字**- [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
 - [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
 - [ ] 进阶版本：csf-lite / csf-full
