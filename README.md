@@ -457,3 +457,15 @@ Legally, CC BY-NC asks for attribution. What I'd actually love more:
 - Startups are free; if it ends up helping you, come say hi when you've made it.
 
 联系 / Contact: see [CONTACT.md](CONTACT.md) · **dapangangang@gmail.com** · GitHub Issues
+
+---
+
+> ✍️ **署名说明 / A note on authorship**
+>
+> 本仓库的文章，我习惯署名为 *by dapangangang with AI*。
+> 虽然作者是两位，**通讯作者只有我**——
+> AI 很健忘，你知道的 :)
+>
+> Articles in this repo are signed *by dapangangang with AI*.
+> Two authors, **one corresponding author** —
+> the AI is, well, famously forgetful :)
