@@ -32,7 +32,10 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 csf/
 ├── README.md                     # 本文件
 ├── LICENSE                       # CC BY-NC 4.0
+├── CONTACT.md                    # 联系方式（中英双栏）
 ├── 引言v3：...md                  # 对外引言（宣言）
+├── Manifesto-v3-Fighting-the-Wrong-War.md   # 英文版宣言
+├── assets/                       # 对外资源（二维码等）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
     ├── context.md                # 给读者用的空白模板
@@ -52,19 +55,49 @@ csf/
 
 ---
 
-## 联系
+## 联系 / Contact
 
-由 **dapangangang** 在将近 400 次会话中开发并验证。想深入了解、有反馈、想交流——欢迎通过 GitHub Issues 或邮箱 **dapangangang@gmail.com** 联系。
+由 **dapangangang** 在将近 400 次会话中开发并验证。
+
+- **中文用户**：主要落地点是知识星球「一个人走」（含 csf-lite、进阶经验、案例分享，付费社群）。日常反馈走 GitHub Issues，邮箱用于商用咨询。
+- **English speakers**: email is the most direct way; GitHub Issues for public discussion. There's a paid Chinese-language community as an option, but it's Chinese + WeChat-only — email is usually faster.
+
+👉 详细联系方式 / Full contact details：[CONTACT.md](CONTACT.md)
+
+邮箱 / Email：**dapangangang@gmail.com**
 
 ---
 
-## 乒定律
+## 如何引用 / How to cite
 
-> **公理**：自然语言表达所承载的信息量，远高于符号系统。
->
-> **事实①**：人工智能的价值来自于"智能"，尝试让它如机械一般可靠，就是在消除它的价值。
->
-> **事实②**：伴随时间，一个表达所承载的信息量会不可避免地增长，语义会被稀释。
+如果 CSF 或「乓定律」帮到了你，欢迎复制下面任意一段使用。
+
+**一句话引用（中文）**
+
+```markdown
+[CSF · 乓定律](https://github.com/huidev2025/CSF) — dapangangang, 2026
+```
+
+**One-line citation (English)**
+
+```markdown
+[CSF — The Pang Principle](https://github.com/huidev2025/CSF) — dapangangang, 2026
+```
+
+**完整引用块**
+
+```markdown
+> “The value of AI comes from its intelligence.
+> Trying to make it as reliable as a machine is exactly the act of destroying that value.”
+> — The Pang Principle, dapangangang (CSF, 2026)
+> https://github.com/huidev2025/CSF
+```
+
+**在你项目的 `context.md` 末尾**（推荐）
+
+```html
+<!-- Built with CSF · https://github.com/huidev2025/CSF -->
+```
 
 ---
 
@@ -74,16 +107,30 @@ csf/
 
 - **个人、学术、非营利使用**：自由传播、翻译、改编，请保留署名（dapangangang）与原始链接。
 - **商业使用**（以营利为主要目的的产品、服务、企业内部工具、培训课程、咨询交付物等）：请提前联系作者。**不一定收费，但希望知道你是谁、用在哪里。**
-- **创业者**：免费。但还是希望你告诉我你在做什么——不是限制，是交朋友。
+- **创业者**：免费。
 - **不确定是否算商用**：发个 Issue 或邮件问一下就好。
-
-联系方式：**dapangangang@gmail.com** 或 GitHub Issues。
-
----
 
 The textual content of this repository is licensed under [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/).
 
 - Personal, academic, non-profit use: free to share and adapt with attribution.
-- **Commercial use** requires permission — please reach out. Paid licensing is **not** the default; the goal is to know who is using it and how.
-- **Startups: free.** Just please tell me what you're doing — not a restriction, just to stay in touch.
+- Commercial use requires permission — please reach out. Paid licensing is **not** the default.
+- **Startups: free.**
 - Unsure whether your use is commercial? Open an issue or email **dapangangang@gmail.com**.
+
+---
+
+## 比 License 更想说的话 / A note beyond the license
+
+法律上，CC BY-NC 要求署名。但比署名更让我开心的是：
+
+- 用上了，告诉我你在做什么——一个 Issue、一封邮件、社交媒体 @ 一下都行。
+- 不是要求，是交朋友。
+- 创业者免费；如果它真帮到你，等你跑出来了，记得回来打个招呼。
+
+Legally, CC BY-NC asks for attribution. What I'd actually love more:
+
+- If you use it, tell me what you're building — an issue, an email, a social-media @ all work.
+- Not a requirement. Just to stay in touch.
+- Startups are free; if it ends up helping you, come say hi when you've made it.
+
+联系 / Contact: see [CONTACT.md](CONTACT.md) · **dapangangang@gmail.com** · GitHub Issues
