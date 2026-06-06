@@ -34,7 +34,7 @@ csf/
 ├── LICENSE                       # CC BY-NC 4.0
 ├── CONTACT.md                    # 联系方式（中英双栏）
 ├── 引言v3：...md                  # 对外引言（宣言）
-├── Manifesto-v3-Fighting-the-Wrong-War.md   # 英文版宣言
+├── Manifesto-v3-You-Are-Fighting-the-Wrong-War.md   # 英文版宣言
 ├── assets/                       # 对外资源（二维码等）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
@@ -44,20 +44,322 @@ csf/
 
 ---
 
-## 路线图
+## CSF 全景 / The CSF Stack
+
+CSF 不是单一文档，是一套**有纵深、已迭代到第三版**的体系。按使用门槛与投入深度分三档：
+
+| 档位 | 适合谁 | 怎么得到 |
+|---|---|---|
+| **csf-minimal** | 任何人，5 分钟体验差异 | 本仓库公开 |
+| **csf-lite** | 个人 / 小团队，真实项目落地 | 知识星球「一个人走」（付费社群） |
+| **csf-full** | 中小研发团队 / 企业级工程化落地 | Owner 直接协作（邮件联系） |
+
+**csf-full 是什么**：约 **60 个**核心规程与经验文件构成的**工程化人机协作管理系统**——四层工程架构（语义管理 / 协作通信 / 质量保障 / 演化系统）+ 三角色协作（Owner / 参谋长 / 开发者）+ W-协议三档质检 + E8 五阶段经验升迁 + D3 三谱系知识路由。
+
+**为什么不公开**：它需要根据研发团队的真实场景定制并陪伴落地——不是产品，是协作。
+
+**CSF 真正的价值不是"不写代码也能开发"**——那只是它能力的副产品。CSF 的核心价值是：**让人机协作变得规范、质量可控、效率提升**。当工程化进一步成熟后，它能支撑大规模产品的设计和开发管理；当下的状态，已经足以直接支持中小研发团队使用。
+
+### 三个工程级设计：放在行业坐标里看
+
+CSF v3 在 **不写一行代码、纯文本** 的前提下，构建了一个 **高内聚、低耦合的软件工程管理系统**。其核心由三个工程设计支撑：
+
+#### ① 自举与自持（Self-Sustaining）
+
+**行业现状**：使用 LLM 时，人必须充当"调度器"——翻 SOP、提醒 AI 该读什么、该用哪个工具，心智负担极重。
+
+**CSF v3 的解法**：AI 实现了**全能力自持**。`context.md` 的"引擎机构"定义了严密的开局协议（L1 加载 → L2 任务级宏观对齐 → L3 具体计划），AI 读完 `context.md` 自己就知道加载哪些链路、去哪里取资源、如何建立 `session-NNN.md` 记录、何时校准、何时收尾。**控制权从人脑移交给了 AI 的"自我规程"**——人的角色从"调度器"压缩为"司令官"，只负责确认与纠偏。
+
+#### ② 基线-Log 分离（Hot/Cold Separation in Filesystem）
+
+**行业现状**：普通 AI 对话把新旧信息混在一条长聊天记录里，触发"Lost in the Middle"——上下文越长，注意力越涣散。
+
+**CSF v3 的解法**：在文件系统层面实现**冷热分离**——
+
+- **基线层**（`context.md` 等，**覆写式**）：永远只保留最新的当前状态。
+- **Log 层**（`session-NNN.md`，**追加式**）：保留完整讨论过程，需要时回溯。
+
+每次新会话启动，AI 读到的都是"脱水"后的高浓度有用信息，从根上规避了大模型注意力涣散的工程缺陷。
+
+#### ③ 多角色物理隔离 + 异步文件通信（Industrial-Grade Multi-Agent）
+
+**行业现状**：CrewAI / AutoGen 这类多 Agent 框架让 AI 之间互相对话——结果是"无限套娃讨论""无效信息轰炸""幻觉互相加强"。
+
+**CSF v3 的解法**：参谋长（设计态）和开发者（执行态）**完全不直接对话**。
+
+- 参谋长把设计转化为 **STB（任务书）**，开发者只读 STB，**禁止**读上游 domain/arch；
+- 开发者用**三栏自检**（✅已读懂 / 🟡不确定 / 🔵准备假设）标记理解状态，任一非空 → PENDING 回参谋长，绝不动键盘；
+- 通信通过文件落盘（`@MSG:N` 哨兵格式），不是对话。
+
+“隔断 + 确定性反馈”是成熟的工业级软件工程思想，被迁移到了 AI 协作场景上：AI 不在对话中互相启动幻觉，人不在跳详中被迫仲裁。
+
+### 已被实战验证的事实（不夸大）
+
+CSF v3 在一个**真实双端商业产品的重构项目**（微信小程序 + H5 + 云函数后端）中被持续打磨与验证：
+
+| 维度 | 数字 / 事实 |
+|---|---|
+| 项目 | 微信小程序 + H5 + 云函数后端，**双端商业产品** |
+| 起点 | 仅 **2 份**输入：旧版业务文档 + UI 截图 |
+| 过程 | **395 次会话**，Owner **全程不碰代码**（不是"少写"，是"不写"） |
+| 已完成 | 架构重新设计 → 主题分包 → 业务切片 → 设计规格 → **底座（除插件外）开发 → 测试验证** |
+| 产物 | **44 个**云函数 + **532 个**前后端源码文件 + **132 份**业务计划/规格 + **116 份**业务设计文档 |
+| 交付 | 整体底座转交研发继续插件开发和完善 |
+| **同时** | CSF 的全套理论与工程方案（**三次版本迭代** v1→v2→v3）在过程中被**同步产出** |
+
+**Owner 的角色一直停留在"目的与判断"这一层**：表达业务真相、校准方向、做价值取舍。架构、分包、设计、编码、测试——CSF 在过程中接管了从"目的"到"可运行代码"之间的全部工程协调。
+
+### 边界——同样诚实地说
+
+- CSF 还**不能**让一个完全不懂软件工程的人独立完成商业产品。Owner 需具备业务判断力与系统性思维，但**不需要会写代码**。
+- CSF 揭示了方法论的可能性，**但不表示成熟到可直接使用**。并未经历足够多、不同类型项目的实践验证，所以欢迎参与一起完善。
+- CSF 并不替代研发团队——它是一套**让研发团队的人机协作规范化、质量可控、效率提升**的方法。
+
+### 已被证明的事情
+
+1. **它能主动建立并跟踪计划** —— 你眼前看到的这个仓库本身（README、Manifesto、CONTACT、_dlog、commit 历史），就是 CSF 在管理它自己的发布过程。
+2. **它能在执行中发现问题，回头复查设计、重新制定修复计划并执行到收敛** —— 宣言里给出了具体例子。
+3. 极高提升了我个人的设计、开发、测试效率和质量。我不懂代码，不写文档。过程中几次严重的设计缺陷都是我自己偷懒导致的，但也都是AI（或CSF规程）发现并修复的。
+4. 计划可以变更，AI在整个过程中有很好的延续性：能抬头看路，也能低头干活儿。
+
+#### 看图说话：AI 自己维护、给自己看的项目状态
+
+下面这张图，是 **AI 在 `context.md` 中自己维护、给自己（下次开会话的自己）看的**项目全景图与当前红点。不是给人看的看板，不是事后整理的汇报材料——是 AI 持续在工作流里写、读、覆写的活产物：
+
+<p align="center">
+  <img src="assets/project-panorama-and-red-dot.png" alt="CSF v3 项目全景图与当前任务红点（AI 自维护）" width="780" />
+</p>
+
+读这张图时，注意几件事：
+
+- 整个项目从 S1 到 M4，主线 + 多次「打岔」（CSF 自身重建、回归试运行、节点统计层、扫描矩阵……）+ 多次计划变更，**AI 始终知道自己现在在哪、来自哪、还要去哪**——位置、来路、去向三维度全程没有丢。
+- "🔴 开发红点 / 参谋红点 / 产出位置" 三行让任意一次新会话**零搜索**就能续上工作——这正是基线-Log 分离 + 触发索引的工程效果。
+- 项目历经数百次会话、跨工作日、跨主题包、跨人机轮转，**这张图始终是干净、有结构、可信的**——这是 AI 在 CSF 规程之下能稳定持有"项目记忆"的实证。
+
+行业现状对照：当下绝大多数 LLM 工程实践，做不到让 AI 在长周期、多变更、多角色协作中**持续维护一份给自己用的、可信的项目状态**。CSF 把这件事做出来了。
+
+---
+
+### 理论独立性
+
+CSF 体系的 6 个可能的独立创新点已成体系，可单独抽出供研究者参考或者帮我修正：
+
+1. 消费侧 / 供应侧的通用分析框架
+2. 目的驱动的注意力工程（不是 prompt engineering）
+3. **工程层能力增长独立于模型层** —— 同模型 + 更好的工程组织 → 更好的结果
+4. 文件系统作为延伸认知系统（extended cognition）的工程实例
+5. D3 三谱系作为知识路由系统
+6. 业务语言放大机制（W-协议核心：跨语言翻译会放大误解，业务直觉是检测仪器）
+
+如果你是企业决策者或研发团队负责人，正在为 RAG 复杂度爆炸 / Agent 编排维护成本 / AI 工程化落地困难而困惑——值得读完[宣言](Manifesto-v3-You-Are-Fighting-the-Wrong-War.md)和 [csf-minimal](csf-minimal/README.md) 后联系作者。
+
+---
+
+### English summary
+
+CSF is not a single document. It is a layered, **third-generation** system:
+
+| Tier | For whom | How to get it |
+|---|---|---|
+| **csf-minimal** | Anyone, a 5-minute experience | Public, this repo |
+| **csf-lite** | Individuals / small teams running real projects | Paid Chinese community (Zhishixingqiu) |
+| **csf-full** | SME engineering teams / enterprise-grade adoption | Direct collaboration with the author (email) |
+
+**What csf-full is**: a working set of about **60 core protocol and
+experience files** that constitute an **engineering-grade human–AI
+collaboration management system** — a four-layer architecture
+(semantic management / collaboration / quality / evolution) + a three-role
+protocol (Owner / Chief-of-Staff / Developer) + the W-protocol (three tiers
+of verification) + the E8 experience-promotion pipeline + the D3
+knowledge-routing system.
+
+**Why it is not public**: it has to be tailored and walked into your team.
+It is collaboration, not a product.
+
+**The real value of CSF is not "ship without writing code"** — that is a
+side-effect. The real value is making human–AI collaboration **regulated,
+quality-controllable, and more efficient**. With further maturation it can
+support large-scale product design and engineering management; in its
+current state it is already directly usable by SME engineering teams.
+
+### Three engineering pillars — placed against the industry
+
+In **plain text, without a single line of glue code**, CSF v3 builds a
+**high-cohesion, low-coupling software-engineering management system** on
+three pillars:
+
+#### ① Self-Sustaining
+
+**Industry today**: humans serve as the scheduler — flipping through SOPs,
+reminding the LLM what to read next, which tool to invoke. The cognitive
+load on the human is enormous.
+
+**CSF v3**: the AI **runs itself end-to-end**. The "engine" section in
+`context.md` defines a strict opening protocol (L1 load → L2 task-level
+alignment → L3 concrete plan). After reading `context.md` the AI knows
+which chains to load, where to retrieve resources, when to log to
+`session-NNN.md`, when to recalibrate, and how to close out. Control of
+"how to collaborate with the human" is **handed off from human cognition to
+the AI's own self-procedure**. The human becomes a *commander* (confirm /
+correct) rather than a *scheduler*.
+
+#### ② Hot/Cold Separation in the Filesystem (Baseline–Log)
+
+**Industry today**: in a typical LLM session, fresh and stale information
+sit side by side in one long transcript — triggering the well-known
+"Lost in the Middle" attention degradation.
+
+**CSF v3**: cold/hot separation **at the filesystem level** —
+
+- **Baseline layer** (`context.md`, *overwrite-style*) keeps only the
+  current dehydrated state.
+- **Log layer** (`session-NNN.md`, *append-only*) preserves the full
+  reasoning trail for back-tracing when needed.
+
+Every new session starts from concentrated, current information.
+The attention-degradation flaw is engineered around, not fought.
+
+#### ③ Industrial-Grade Multi-Role: Physical Isolation + Async File-Based Comms
+
+**Industry today**: multi-agent frameworks (CrewAI, AutoGen, …) let agents
+chat directly with each other. The common failure modes are "infinite
+recursion of debate", "noise amplification", and "mutual hallucination
+reinforcement".
+
+**CSF v3**: the Chief-of-Staff (design) and the Developer (execution)
+**never converse directly**.
+
+- The Chief-of-Staff writes a **STB (Simple Task Brief)** as the contract.
+  The Developer is **forbidden** to read upstream `domain/` or `arch/`.
+- The Developer self-checks every input through a **three-column
+  classifier** — ✅ understood / 🟡 unsure / 🔵 working assumption. If any
+  non-✅ remains, the work is **PENDING'd back**; no keystrokes.
+- All cross-role communication happens through the filesystem with a
+  sentinel format (`@MSG:N`), never as conversation.
+
+“Isolation + deterministic feedback” is mature industrial software
+engineering applied to the AI-collaboration setting. Agents do not
+hallucinate at each other in conversation; humans do not get coerced into
+arbitrating runaway debates.
+
+### What has been verified, plainly
+
+CSF v3 was hardened inside a **real, two-front commercial product
+refactor** (WeChat Mini Program + H5 + cloud-function backend):
+
+| Dimension | Number / Fact |
+|---|---|
+| Project | Mini Program + H5 + cloud-function backend, **two-front commercial product** |
+| Inputs | Only **2** sources: legacy business docs + UI screenshots |
+| Process | **395 sessions** — Owner **wrote no code at all** |
+| Delivered | Architecture redesign → modular partitioning → business slicing → design specs → **base implementation (everything except plugins) → testing & verification** |
+| Artifacts | **44** cloud functions + **532** source files + **132** plan/spec docs + **116** design docs |
+| Hand-off | The full base was delivered to a professional engineering team for plugin development and final polish |
+| **In parallel** | The full CSF method itself, across **three iterations (v1 → v2 → v3)**, was produced *during* the project |
+
+The Owner stayed at the level of *purpose and judgment* throughout —
+articulating business truth, calibrating direction, making value trade-offs.
+Architecture, partitioning, design, coding, and testing — CSF coordinated
+the path from *purpose* to *running code*.
+
+### Honest boundaries
+
+- CSF cannot yet let someone with no software-engineering literacy ship a
+  commercial product alone. The Owner needs business judgment and systems
+  thinking — but **not coding ability**.
+- CSF as a methodology is **not yet mature**. There is substantial work
+  ahead (boundary conditions, degradation modes, experience-aging, the
+  ongoing tension with the LLM training prior, …).
+- CSF does not replace engineering teams. It is a method that makes the
+  team's human–AI collaboration **regulated, quality-controllable, and
+  efficient**.
+
+### What CSF has demonstrably proved
+
+1. It can **autonomously plan and track work** — this very repository
+   (README, Manifesto, CONTACT, _dlog, commit history) is being managed by
+   CSF in front of you.
+2. It can **detect deviation during execution, loop back to revise design,
+   re-plan the fix, and drive the work to convergence** — a concrete
+   example is in the manifesto.
+3. It dramatically lifted the Owner's design / development / test
+   throughput and quality. The Owner does not write code or docs. Every
+   serious design defect during the project came from the Owner skipping
+   a check — and every one of them was caught and repaired by the AI
+   under the CSF protocol.
+4. **Plans change. The AI's continuity holds.** Across hundreds of
+   sessions and many mid-flight re-plans, the AI consistently knew where
+   it was, where it came from, and where it was going.
+
+#### Look at it: the project state the AI maintains for itself
+
+The picture below is the **project panorama and the current red dot —
+written, read, and overwritten by the AI inside `context.md`, *for its
+own next-session self***. It is not a dashboard for humans. It is not a
+post-hoc report. It is a live working artifact.
+
+<p align="center">
+  <img src="assets/project-panorama-and-red-dot.png" alt="CSF v3 project panorama and red dot, maintained by the AI itself" width="780" />
+</p>
+
+Things to notice while reading it:
+
+- The whole project, from S1 through M4, with multiple side-quests
+  (CSF's own rebuild, regression dry-run, node-stats layer, the cross-
+  scan matrix…) and multiple replans — and the AI is always aware of
+  *where it is, where it came from, and where it has yet to go*.
+- The three lines under "current red dot" (Chief-of-Staff red dot /
+  Developer red dot / output location) let any new session pick up the
+  work with **zero search**. That is the engineering payoff of the
+  baseline–log separation plus the trigger index.
+- This artifact survived hundreds of sessions, many workdays, many
+  topic-package transitions, and many human–AI handovers — and remains
+  clean, structured, and trustworthy. That is empirical evidence that
+  an AI under the CSF protocol can hold a faithful "project memory"
+  over the long run.
+
+Compared with the industry status quo, very few LLM workflows produce a
+durable, AI-authored project state that the AI itself can rely on across
+long horizons, replans, and role rotations. CSF makes this routine.
+
+### Theoretical independence
+
+The six independent contributions form a self-contained body of work that
+researchers can engage with on its own terms:
+
+1. The consumer-side vs supply-side analytic frame
+2. **Purpose-driven attention engineering** (not prompt engineering)
+3. **Engineering-layer capability growth decoupled from the model layer**
+4. The filesystem as an extended-cognition substrate
+5. The D3 knowledge-routing system
+6. The business-language amplification mechanism (the W-protocol's core
+   epistemological insight: cross-language translation amplifies
+   misunderstanding; business intuition is the detector)
+
+If you are a decision-maker or engineering leader struggling with runaway
+RAG complexity, agent-orchestration cost, or stalled AI engineering
+adoption — read the
+[manifesto](Manifesto-v3-You-Are-Fighting-the-Wrong-War.md) and
+[csf-minimal](csf-minimal/README.md), then reach out.
+
+---
+
+## 路线图 / Roadmap
 
 - [x] 最小教学版（csf-minimal）
-- [x] 引言文章
+- [x] 引言文章（中文 + 英文宣言）
 - [x] 发布授权（CC BY-NC 4.0）
-- [ ] 英文版（English translation）
-- [ ] 进阶版本：csf-lite / csf-full
+- [x] 联系说明（CONTACT.md，中英双栏）
+- [ ] 小白用户上手指引（QUICKSTART / FAQ，中英文）
+- [ ] csf-lite 公开介绍（不含具体内容）
 - [ ] 实践案例与社区反馈
+- [ ] 进阶内容预告
 
 ---
 
 ## 联系 / Contact
 
-由 **dapangangang** 在将近 400 次会话中开发并验证。
+由 **dapangangang** 在 395 次会话的真实重构项目中开发并验证。
 
 - **中文用户**：主要落地点是知识星球「一个人走」（含 csf-lite、进阶经验、案例分享，付费社群）。日常反馈走 GitHub Issues，邮箱用于商用咨询。
 - **English speakers**: email is the most direct way; GitHub Issues for public discussion. There's a paid Chinese-language community as an option, but it's Chinese + WeChat-only — email is usually faster.

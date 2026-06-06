@@ -42,7 +42,7 @@ csf在github上的发布和维护
 - [x] 仓库根 README 第一版
 - [x] git 初始化 + 首次推送到 https://github.com/huidev2025/CSF
 - [x] LICENSE 选型：CC BY-NC 4.0，README 有补充说明（个人/创业者免费 + 商用联系）
-- [x] 英文版宣言首版：Manifesto-v3-Fighting-the-Wrong-War.md
+- [x] 英文版宣言首版：Manifesto-v3-You-Are-Fighting-the-Wrong-War.md
 - [x] 词典定档：Pang Principle / intelligence / purpose / discern · carry out / drift / dynasty's sword·law·official 三层隐喻
 - [x] README 新增「如何引用 / How to cite」与「比 License 更想说的话」两段
 - [x] csf-minimal/context.md 模板尾部加 attribution 标识行
