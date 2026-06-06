@@ -20,9 +20,13 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 按顺序，五分钟可以开始：
 
 1. **[引言](引言v3：你们在拿着前朝的尚方宝剑，斩当朝的官.md)** —— 为什么需要 CSF，乓定律
-2. **[csf-minimal/README.md](csf-minimal/README.md)** —— CSF 最小教学版，30 秒说明 + 三个核心差异
-3. **[csf-minimal/context.md](csf-minimal/context.md)** —— 你可以直接复制使用的协作记忆模板
-4. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** —— A/B 实验设计，亲自感受差异
+2. **[QUICKSTART.md](QUICKSTART.md)** —— 上手指引（中英文）：你不需要会代码，只需要把目标说清楚
+3. **[csf-minimal/README.md](csf-minimal/README.md)** —— CSF 最小教学版，30 秒说明 + 三个核心差异
+4. **[csf-minimal/context.md](csf-minimal/context.md)** —— 你可以直接复制使用的协作记忆模板
+5. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** —— A/B 实验设计，亲自感受差异
+
+> **第一次来？** 直接看 **[QUICKSTART.md](QUICKSTART.md)** 就够了。
+> **First time here?** Read **[QUICKSTART.md](QUICKSTART.md)** first.
 
 ---
 
@@ -31,11 +35,13 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 ```
 csf/
 ├── README.md                     # 本文件
+├── QUICKSTART.md                 # 上手指引（中英双栏）
 ├── LICENSE                       # CC BY-NC 4.0
 ├── CONTACT.md                    # 联系方式（中英双栏）
 ├── 引言v3：...md                  # 对外引言（宣言）
 ├── Manifesto-v3-You-Are-Fighting-the-Wrong-War.md   # 英文版宣言
 ├── assets/                       # 对外资源（二维码等）
+├── _dlog/                        # 公开的真实工作日志（协作示范）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
     ├── context.md                # 给读者用的空白模板
@@ -350,10 +356,18 @@ adoption — read the
 - [x] 引言文章（中文 + 英文宣言）
 - [x] 发布授权（CC BY-NC 4.0）
 - [x] 联系说明（CONTACT.md，中英双栏）
-- [ ] 小白用户上手指引（QUICKSTART / FAQ，中英文）
+- [x] 小白用户上手指引（[QUICKSTART.md](QUICKSTART.md)，中英双栏）
 - [ ] csf-lite 公开介绍（不含具体内容）
 - [ ] 实践案例与社区反馈
-- [ ] 进阶内容预告
+
+### 未来 / What comes next
+
+我会持续在这个仓库里回答大家的问题（GitHub Issues / 邮件），并在合适的时候整理一些**专栏式的长文**发布在这里，提供更系统的帮助。如果你有问题，**就来问**——这是这件事最自然的下一步。
+
+I'll keep answering questions here (GitHub Issues / email) and, when topics
+deserve it, publish longer **column-style essays** in this repo for more
+systematic help. If you have a question, **just ask** — that is the most
+natural next step for this work.
 
 ---
 
