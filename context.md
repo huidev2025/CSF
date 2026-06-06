@@ -54,6 +54,12 @@ csf在github上的发布和维护
 - [x] Manifesto 改名：Manifesto-v3-You-Are-Fighting-the-Wrong-War.md（消歧义）
 - [x] 小白用户上手指引：QUICKSTART.md（中英双栏） + README 加入口
 - [x] 内容预告简化为「未来」一段（README 路线图下，中英双语）
+- [x] 首个公开 release：**v1.0.0**（annotated tag + GitHub Release页）
+- [x] GitHub SEO 路径 ①：**About description** （“works *with* LLM nature, not around it… make RAG and agent orchestration unnecessary. Home of the Pang Principle.”）
+- [x] GitHub SEO 路径 ②：**20 个 Topics 已填**（报接钩子 + 价值定位 + 品牌锚点三组）
+- [x] GitHub SEO 路径 ③：README 顶部英文 tagline 重写（嵌入 6 个关键词，「unnecessary, not unavailable」点明“超越不是缺失”）
+- [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
+- [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
 - [ ] 进阶版本：csf-lite / csf-full
 
@@ -66,38 +72,44 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-06（第五轮对话，主题：小白用户上手指引 QUICKSTART.md）
+- **日期**：2026-06-06（第六轮对话，主题：v1.0.0 发布 + GitHub SEO）
 - **做了什么**：
-  1. 对 dlog_003 隐私筛查：Owner 决定「保留 ****** 那一段对话」（作为过程公开示范，占位符本身已脱敏）。
-  2. 产出 **QUICKSTART.md**（中英双栏，与 CONTACT.md 同风格）。覆盖三个人群（创业者/极客 + 职场工具需求 + 学生/新手）不分层，用总体同一该。主骨架：读者画像 → 三个能力要求 → 不同复杂度对应什么版本 → 5 分钟快速上手 → 6 条实用习惯（Owner 提供 2 条 + 补充 4 条）→ 2 个常见错误 → 进阶路径 → 收束。英文版同步，轻微精简。
-  3. README 同步：「从哪开始读」增加 QUICKSTART 为第二项入口，并加一句「第一次来？直接看 QUICKSTART」；仓库结构补 QUICKSTART.md 与 _dlog/；路线图勾选「小白上手指引」为已完成。
-  4. 重要设计决策：在「实用习惯 ①」中，以 _dlog 作为「让 AI 读 → 反身教会读者」的入门路径——一举两得地让「公开工作日志」从「透明感谈资」升格为「入门资源」。
+  1. **push 第五轮变更**：QUICKSTART + README + dlog_003 + context.md——commit `77dc030`。
+  2. **首个发布**：打了 annotated tag `v1.0.0`，含结构化 release notes。Owner 随后在 GitHub 网页手动创建了 Release 页。关键澄清：*tag 不会自动变成 release，需要独立创建*。
+  3. **About description 定稿**：最终采用「变体 A」，Owner 加了「不是更便宜、是更对」的表达：*“works with LLM nature, not around it — natural language and purpose make RAG and agent orchestration unnecessary. Home of the Pang Principle.”* Owner 自行粘贴。
+  4. **GitHub SEO 战略全景**：梳理 4 条路径（About / Topics / README 顶部关键词 / 外部信号 + 内容飞轮）。总原则：嫌接钩子（RAG/agent/prompt-engineering/…）+ 品牌锚点（Pang Principle/CSF）+ 品质贯穿（不是更便宜、是更对）。
+  5. **20 个 Topics 清单**（已填）：ai-collaboration / human-ai-collaboration / llm / llm-engineering / prompt-engineering / context-engineering / agentic-workflow / ai-agents / multi-agent / **rag-alternative** / **no-rag** / ai-development / ai-methodology / software-engineering / dogfooding / manifesto / **pang-principle** / **csf** / collaboration-specification-framework / chinese。
+  6. **README 顶部英文 tagline 重写**（`3527270`）：从 2 个关键词扩到 6 个（human-AI collaboration / LLM / RAG / agent orchestration / prompt engineering / Pang Principle），核心表达 “unnecessary, not unavailable”——语法上出「超越，不是缺失」。
 - **关键选择**：
-  - 不拆三个读者画像，用一份总体覆盖——避免「争完受众定位」反复拉踢，则读者自身被赶走。
-  - 以 “你需要什么样的能力” 作为开头，不以 “什么是 CSF”，直接面向读者意愿。
-  - 习惯以 “实际场景 × 错误示范 × “为什么”” 三部分展示，不靠说教。
-  - 补中「两个错误」是主动加的，因为它们的读者可以「自检」，比「应该怎么做」更高效。
-  - 跨语言读者那段，把「读不懂中文」本身转化为「第一个 CSF 实践场景」——不是障碍，是 demo。
-- **未推送**：本轮变更未 push（QUICKSTART.md 新增 + README + context.md）。等 Owner 阅后决定。
-- **dlog_003**：本会话未产出，顺延到下一个话题收尾时产出。
+  - SEO 不走「造词」线路，走「嫌接 + 锚点」双重：让读者从熟词进来，从你的词出去。
+  - 中文那句 tagline **不动** ——中文检索靠外部渠道（知识星球 / V2EX / 即刻）承担，不占这个顶部窄通道。
+  - **不制定“刷 star”设想**：GitHub 算法会识别异常。前 50 颗 star 必须靠真实读者。
+- **未推送**：无（所有类仓库内变更已 push）。本轮 Owner 将另开专题处理路径 ④ 外部信号；路径 ⑤ 首篇文章在 ④ 后接上。
+- **dlog_003**：本会话未产出，已顺延到下一个话题收尾时一并产出。
 
 ---
 
 ## §D 下次对话
 
-- **目的**：Owner 阅后决定是否 push QUICKSTART 本轮变更；然后进入下一个话题（内容预告 / csf-lite 导读页 / 其他）。
+- **目的**：Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章）落地。
 
-- **Owner 预告的后续工作项**：
+- **Owner 在本轮末得问题**：未来专栏文章发在哪里？仓库内 vs 外部平台。**下一轮详细诨**。
 
-  1. ~~**英文版宣言**~~ — 已完成首版。
-  2. ~~**社交媒体与联系说明**~~ — 已交付（CONTACT.md + README 联系段）。
-  3. ~~**小白用户上手指引**~~ — 已交付（QUICKSTART.md，中英双栏）。
-  4. **内容预告**。后期会在仓库中陆续提供的进阶内容。
-  5. **csf-lite 导读页**（可选）。不含具体内容，仅说明「它是什么 / 适合谁 / 怎么获得」。
+- **后续工作项**：
 
-- **建议下次开场**：如 push 后进入「内容预告」，Owner 需先定「预告多少 / 如何表述未完成事项」：是「仓库 README 路线图、一句话带过」还是「独立一页 ROADMAP.md」。我趋向前者（路线图本就在 README）。
+  1. ~~**英文版宣言**~~ — 完成。
+  2. ~~**联系说明**~~ — 完成（CONTACT.md）。
+  3. ~~**小白上手指引**~~ — 完成（QUICKSTART.md）。
+  4. ~~**内容预告**~~ — 已简化为 README 路线图下「未来」一段。
+  5. ~~**v1.0.0 首个公开发布**~~ — 完成（tag + Release）。
+  6. ~~**SEO 路径 ①②③**~~ — 完成（About / Topics / README tagline）。
+  7. **SEO 路径 ④ 外部信号**——Owner 另开专题处理。备选动作：知识星球开张 / Hacker News Show HN / V2EX-即刻-少数派 中文社区 / 给 awesome-* 类列表提 PR。
+  8. **SEO 路径 ⑤ 首篇专栏文章**——题目未定，5 个备选：*Why your RAG keeps growing* / *Past prompt engineering* / *395 sessions on Lost in the Middle* / *The Pang Principle one-pager* / *CSF dogfoods this repo*。
+  9. **csf-lite 导读页**（上轮遗留，可选）。
 
-- **需要的资料**：现有仓库内容 + 下面「备忘·理论参考资料」。
+- **下轮开场必答**：“专栏文章发在哪里？”这个问题已被 Owner 提出。需提供平台对比（仓库内 articles/ / GitHub Pages / Substack / 知识星球 / 个人站点 / 多点同步）+ 推荐。
+
+- **需要的资料**：现有仓库内容 + 「备忘·理论参考资料」。
 
 ---
 
@@ -108,7 +120,7 @@ csf在github上的发布和维护
 - **Owner 邮箱**：dapangangang@gmail.com（商用咨询 / 交流使用，必要时在对外文案中使用）
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
-- **未同步到 GitHub 的事项**：本轮未 push，包含三项变更：QUICKSTART.md（新增）、README.md（「从哪开始读」与路线图）、context.md（本轮进度 + §C/§D）。本轮未产出 dlog_003，顺延到下一个话题收尾。
+- **未同步到 GitHub 的事项**：本轮本地仅调整 context.md（§C/§D + 进度），还未 push。本轮未产出 dlog_003，顺延。
 
 ---
 
