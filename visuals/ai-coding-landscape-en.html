@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Evolution Landscape & CSF Positioning</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-6xl p-6 bg-slate-900 text-slate-100 rounded-xl shadow-2xl border border-slate-800 font-sans">
+        
+        <!-- Header -->
+        <div class="mb-8 border-b border-slate-800 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h2 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                    <i data-lucide="git-compare" class="text-teal-400 h-6 w-6"></i>
+                    AI Coding Evolution Landscape
+                </h2>
+                <p class="text-slate-400 text-sm mt-1">
+                    From "Passive Tool" to "Autonomous Agent", and ultimately to "CSF Peer-to-Peer Collaboration Framework"
+                </p>
+            </div>
+            <span class="px-3 py-1 bg-teal-500/10 text-teal-400 text-xs font-semibold rounded-full border border-teal-500/20 self-start md:self-auto">
+                Evolutionary Roadmap
+            </span>
+        </div>
+
+        <!-- Evolution Timeline (Horizontal on Desktop, Vertical on Mobile) -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8">
+            
+            <!-- Stage 1 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 01 · Assist</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="keyboard" class="h-4 w-4 text-slate-400"></i>
+                        Inline Completion
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>Examples:</strong> Copilot Classic, Supermaven<br/>
+                        <strong>Pain Point:</strong> Reduce repetitive typing time.<br/>
+                        <strong>Pattern:</strong> Ghost text prediction; press Tab to accept.<br/>
+                        <strong>Relationship:</strong> AI acts as a <strong>"smart input method"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 02 · Interact</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="message-square" class="h-4 w-4 text-slate-400"></i>
+                        Context-Aware Chat
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>Examples:</strong> Cursor Chat, Copilot Chat<br/>
+                        <strong>Pain Point:</strong> Cross-file understanding and refactoring.<br/>
+                        <strong>Pattern:</strong> Sidebar chat; inline edits (Cmd+K).<br/>
+                        <strong>Relationship:</strong> AI acts as a <strong>"Q&A Copilot"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 03 · Execute</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="play" class="h-4 w-4 text-slate-400"></i>
+                        Agentic Flow-State
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>Examples:</strong> Cursor Composer, Windsurf Cascade<br/>
+                        <strong>Pain Point:</strong> Multi-file edits, terminal execution, self-correction.<br/>
+                        <strong>Pattern:</strong> Single prompt triggers automated multi-step edits.<br/>
+                        <strong>Relationship:</strong> AI acts as an <strong>"advanced utility"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 04 · Hands-off</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="bot" class="h-4 w-4 text-slate-400"></i>
+                        Autonomous SWE
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>Examples:</strong> Devin, Swe-agent, OpenDevin<br/>
+                        <strong>Pain Point:</strong> End-to-end resolution of complex GitHub issues.<br/>
+                        <strong>Pattern:</strong> AI runs autonomously in sandbox for hours.<br/>
+                        <strong>Relationship:</strong> Attempting to make AI an <strong>"independent contractor"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 5: CSF -->
+            <div class="bg-teal-950/30 p-4 rounded-lg border border-teal-500/40 flex flex-col justify-between shadow-lg shadow-teal-950/30 relative">
+                <div class="absolute -top-2 -right-2 bg-teal-500 text-slate-950 text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
+                    NEW PARADIGM
+                </div>
+                <div>
+                    <div class="text-[10px] font-bold text-teal-400 tracking-wider uppercase mb-1">Stage 05 · Collaborate</div>
+                    <h3 class="text-sm font-bold text-teal-300 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="sparkles" class="h-4 w-4 text-teal-400"></i>
+                        CSF Framework
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong>Examples:</strong> CSF Specification & Protocols<br/>
+                        <strong>Pain Point:</strong> Attention drift & semantic dilution caused by AI reading too much junk.<br/>
+                        <strong>Pattern:</strong> Baseline-log physical isolation, sliding window activation.<br/>
+                        <strong>Relationship:</strong> <span class="text-teal-300 font-semibold">Peer-to-Peer Human-AI Collaboration</span>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section: Detailed Comparison & GitHub Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            
+            <!-- Left: The Core Paradox of AI Coding -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 flex flex-col justify-between lg:col-span-2">
+                <div>
+                    <h4 class="text-sm font-bold text-slate-200 mb-3 flex items-center gap-1.5">
+                        <i data-lucide="help-circle" class="text-teal-400 h-4 w-4"></i>
+                        Why Stage 4 (Devin) Struggles, and Why Stage 5 (CSF) is Needed
+                    </h4>
+                    <div class="space-y-3 text-xs text-slate-400 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-200">❌ The "Mechanical Fallacy" of Agents:</strong> 
+                            Autonomous Agent lines (like Devin) try to make AI act as a deterministic machine for hours. This violates AI's nature—<strong>AI's value lies in its active intelligence (liveliness), not mechanical certainty</strong>. Eliminating liveliness eliminates its value.
+                        </p>
+                        <p>
+                            <strong class="text-slate-200">❌ The Law of Semantic Dilution:</strong> 
+                            As tasks drag on, AI generates and reads massive amounts of process logs and discarded attempts. This information growth is inevitable, leading to <strong>extreme semantic dilution</strong> where AI gets lost in its own noise.
+                        </p>
+                        <p>
+                            <strong class="text-teal-400">✔️ CSF's Entropy Reduction:</strong> 
+                            CSF abandons the illusion of "mechanical AI". It uses <span class="text-teal-300">Baseline-Log Separation</span> to physically cut off useless information, and a <span class="text-teal-300">Sliding Window</span> to balance "looking ahead" with "hands-on execution". It treats AI as a peer collaborator rather than a black-box contractor.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Assumptions Badge -->
+                <div class="mt-4 pt-4 border-t border-slate-800 grid grid-cols-3 gap-2 text-[10px] text-slate-500">
+                    <div><span class="text-teal-500 font-semibold">Axiom:</span> NL info density exceeds symbols</div>
+                    <div><span class="text-teal-500 font-semibold">Fact ①:</span> AI's value lies in active intelligence</div>
+                    <div><span class="text-teal-500 font-semibold">Fact ②:</span> Semantics dilute inevitably over time</div>
+                </div>
+            </div>
+
+            <!-- Right: GitHub Card -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-teal-500/30 flex flex-col items-center justify-between text-center lg:col-span-1">
+                <div class="w-full">
+                    <div class="flex items-center justify-center gap-1.5 text-teal-400 font-bold text-sm mb-1">
+                        <i data-lucide="github" class="h-4 w-4"></i>
+                        <span>GitHub Repository</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 mb-4">Join the CSF Open Source Community</p>
+                </div>
+                
+                <div class="w-full bg-slate-900 p-4 rounded-lg border border-slate-800 text-left mb-4">
+                    <div class="text-xs font-semibold text-slate-200 mb-1">huidev2025/CSF</div>
+                    <p class="text-[10px] text-slate-400 leading-relaxed mb-3">Collaboration Specification Framework: A practical engineering protocol for human-AI co-development.</p>
+                    <a href="https://github.com/huidev2025/CSF" target="_blank" class="inline-flex items-center gap-1 text-[10px] text-teal-400 font-semibold hover:underline">
+                        <span>View on GitHub</span>
+                        <i data-lucide="external-link" class="h-3 w-3"></i>
+                    </a>
+                </div>
+                
+                <div class="text-[10px] text-slate-400">
+                    <p class="text-[9px] text-slate-500">Star & Contribute to the future of Human-AI Collaboration</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+            <p class="text-xs text-slate-500">
+                © 2026 CSF (Collaboration Specification Framework) · Practical engineering protocols for human-AI co-development.
+                · <a href="https://github.com/huidev2025/CSF" class="text-teal-500 hover:underline">github.com/huidev2025/CSF</a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

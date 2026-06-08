@@ -36,6 +36,17 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 
 ---
 
+## 可视化导图 / Visual Guides
+
+两张交互式图谱，帮你在 2 分钟内理解 CSF 在 AI 编程领域的位置：
+
+| 图谱 | 中文 | English |
+|---|---|---|
+| **AI 编程演进版图**（5 阶段时间线：从补全工具 → 自主 Agent → CSF） | [查看](https://huidev2025.github.io/CSF/visuals/ai-coding-landscape-zh.html) | [View](https://huidev2025.github.io/CSF/visuals/ai-coding-landscape-en.html) |
+| **三流派对比与 CSF 定位图谱**（Autonomous Agent / SDD / CSF 三条路线的假设与瓶颈） | [查看](https://huidev2025.github.io/CSF/visuals/csf-positioning-zh.html) | [View](https://huidev2025.github.io/CSF/visuals/csf-positioning-en.html) |
+
+---
+
 ## 仓库结构
 
 ```

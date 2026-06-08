@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 辅助编程演进版图与 CSF 定位</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-6xl p-6 bg-slate-900 text-slate-100 rounded-xl shadow-2xl border border-slate-800 font-sans">
+        
+        <!-- Header -->
+        <div class="mb-8 border-b border-slate-800 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h2 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                    <i data-lucide="git-compare" class="text-teal-400 h-6 w-6"></i>
+                    AI 辅助编程演进版图
+                </h2>
+                <p class="text-slate-400 text-sm mt-1">
+                    从"被动工具"到"自主智能体"，再到"CSF 人机对等协作框架"的演进脉络
+                </p>
+            </div>
+            <span class="px-3 py-1 bg-teal-500/10 text-teal-400 text-xs font-semibold rounded-full border border-teal-500/20 self-start md:self-auto">
+                Evolutionary Roadmap
+            </span>
+        </div>
+
+        <!-- Evolution Timeline (Horizontal on Desktop, Vertical on Mobile) -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8">
+            
+            <!-- Stage 1 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 01 · 辅助</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="keyboard" class="h-4 w-4 text-slate-400"></i>
+                        行内代码补全
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>代表：</strong> Copilot Classic, Supermaven<br/>
+                        <strong>痛点：</strong> 减少重复敲键盘的时间。<br/>
+                        <strong>模式：</strong> 幽灵文本预测，按 Tab 键采纳。<br/>
+                        <strong>人机关系：</strong> AI 是一个<strong>"超级输入法"</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 02 · 交互</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="message-square" class="h-4 w-4 text-slate-400"></i>
+                        对话式感知助手
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>代表：</strong> Cursor Chat, Copilot Chat<br/>
+                        <strong>痛点：</strong> 跨文件理解上下文与定向重构。<br/>
+                        <strong>模式：</strong> 侧边栏对话，选中代码进行解释/修改。<br/>
+                        <strong>人机关系：</strong> AI 是一个<strong>"问答副驾驶"</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 03 · 执行</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="play" class="h-4 w-4 text-slate-400"></i>
+                        智能体流式协作
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>代表：</strong> Cursor Composer, Windsurf Cascade<br/>
+                        <strong>痛点：</strong> 自动修改多文件，运行终端并自纠错。<br/>
+                        <strong>模式：</strong> 给出一个指令，AI 自动拆解并连续修改。<br/>
+                        <strong>人机关系：</strong> AI 是一个<strong>"高级提效工具"</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between relative">
+                <div>
+                    <div class="text-[10px] font-bold text-slate-500 tracking-wider uppercase mb-1">Stage 04 · 脱手</div>
+                    <h3 class="text-sm font-bold text-slate-200 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="bot" class="h-4 w-4 text-slate-400"></i>
+                        自主软件工程师
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        <strong>代表：</strong> Devin, Swe-agent, OpenDevin<br/>
+                        <strong>痛点：</strong> 尝试端到端完全脱手解决复杂 Issue。<br/>
+                        <strong>模式：</strong> 扔给 AI 一个链接，AI 在沙盒中自主跑数小时。<br/>
+                        <strong>人机关系：</strong> 尝试让 AI 成为<strong>"独立外包"</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stage 5: CSF -->
+            <div class="bg-teal-950/30 p-4 rounded-lg border border-teal-500/40 flex flex-col justify-between shadow-lg shadow-teal-950/30 relative">
+                <div class="absolute -top-2 -right-2 bg-teal-500 text-slate-950 text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
+                    NEW PARADIGM
+                </div>
+                <div>
+                    <div class="text-[10px] font-bold text-teal-400 tracking-wider uppercase mb-1">Stage 05 · 协作</div>
+                    <h3 class="text-sm font-bold text-teal-300 mb-2 flex items-center gap-1.5">
+                        <i data-lucide="sparkles" class="h-4 w-4 text-teal-400"></i>
+                        CSF 协作规范框架
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong>代表：</strong> CSF 理论体系与规程规范<br/>
+                        <strong>痛点：</strong> 解决长任务中 AI 读太多垃圾信息导致的注意力涣散与语义稀释。<br/>
+                        <strong>模式：</strong> 基线-log物理消熵，滑动窗口目的激活。<br/>
+                        <strong>人机关系：</strong> <span class="text-teal-300 font-semibold">人与 AI 对等的协作框架</span>。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section: Detailed Comparison & QR Code -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            
+            <!-- Left: The Core Paradox of AI Coding -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 flex flex-col justify-between lg:col-span-2">
+                <div>
+                    <h4 class="text-sm font-bold text-slate-200 mb-3 flex items-center gap-1.5">
+                        <i data-lucide="help-circle" class="text-teal-400 h-4 w-4"></i>
+                        为什么 Stage 4 (Devin) 无法真正落地，而需要 Stage 5 (CSF)？
+                    </h4>
+                    <div class="space-y-3 text-xs text-slate-400 leading-relaxed">
+                        <p>
+                            <strong class="text-slate-200">❌ 智能体的"机械化误区"：</strong> 
+                            当前的 Autonomous Agent 路线（如 Devin）试图让 AI 像精密机器一样可靠地独立工作数小时。但这违背了 AI 的本性——<strong>AI 的价值在于活性（智能），而非机械的确定性</strong>。强行消除活性，就是在消除 AI 的价值。
+                        </p>
+                        <p>
+                            <strong class="text-slate-200">❌ 语义稀释的自然规律：</strong> 
+                            随着任务时间拉长，AI 在运行中会产生并读取大量的过程日志（Log）、废弃尝试。这些信息不可避免地增长，导致<strong>语义被极度稀释</strong>，AI 最终在海量垃圾信息中迷失方向，产生幻觉。
+                        </p>
+                        <p>
+                            <strong class="text-teal-400">✔️ CSF 的消熵与对等：</strong> 
+                            CSF 放弃了"让 AI 机械化"的幻想。它通过 <span class="text-teal-300">基线-log 分离</span>，在物理上掐断无用信息；通过 <span class="text-teal-300">滑动窗口</span>，让 AI 始终在"抬头看路（宏观目的）"与"低头干活（具体任务）"之间保持平衡。它不把 AI 当工具或外包，而是建立一个<strong>人与 AI 对等协作、安全传导变化</strong>的工程规范。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Assumptions Badge -->
+                <div class="mt-4 pt-4 border-t border-slate-800 grid grid-cols-3 gap-2 text-[10px] text-slate-500">
+                    <div><span class="text-teal-500 font-semibold">公理：</span>自然语言信息量远超符号</div>
+                    <div><span class="text-teal-500 font-semibold">事实①：</span>AI 价值在于活性/智能</div>
+                    <div><span class="text-teal-500 font-semibold">事实②：</span>语义随时间必然稀释</div>
+                </div>
+            </div>
+
+            <!-- Right: Knowledge Planet Card -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-teal-500/30 flex flex-col items-center justify-between text-center lg:col-span-1">
+                <div class="w-full">
+                    <div class="flex items-center justify-center gap-1.5 text-teal-400 font-bold text-sm mb-1">
+                        <i data-lucide="compass" class="h-4 w-4"></i>
+                        <span>知识星球：一个人走</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 mb-3">CSF 理论深度探讨与实践社区</p>
+                </div>
+                
+                <!-- QR Code Container -->
+                <div class="bg-white p-2 rounded-lg shadow-inner mb-3">
+                    <img 
+                        src="../assets/zsxq-qrcode.jpg" 
+                        alt="微信扫码加入星球" 
+                        class="w-28 h-28 object-contain mx-auto"
+                    />
+                </div>
+                
+                <div class="text-[10px] text-slate-400">
+                    <span class="font-semibold text-slate-300">大胖</span> · 星主
+                    <p class="text-[9px] text-slate-500 mt-0.5">微信扫码加入星球，共同演进 CSF</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+            <p class="text-xs text-slate-500">
+                © 2026 CSF (Collaboration Specification Framework) · 旨在用最务实的工程手段解决 AI 编程注意力漂移顽疾
+                · <a href="https://github.com/huidev2025/CSF" class="text-teal-500 hover:underline">github.com/huidev2025/CSF</a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

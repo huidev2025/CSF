@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 辅助编程版图与 CSF 定位图谱</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-5xl p-6 bg-slate-900 text-slate-100 rounded-xl shadow-2xl border border-slate-800 font-sans">
+        <!-- Header -->
+        <div class="mb-8 border-b border-slate-800 pb-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="layers" class="text-teal-400 h-6 w-6"></i>
+                    <h2 class="text-2xl font-bold tracking-tight text-white">
+                        AI 辅助编程版图与 CSF 定位图谱
+                    </h2>
+                </div>
+                <span class="self-start md:self-auto px-3 py-1 bg-teal-500/10 text-teal-400 text-xs font-semibold rounded-full border border-teal-500/20">
+                    Collaboration Specification Framework
+                </span>
+            </div>
+            <p class="text-slate-400 text-sm mt-1">
+                从"技术对抗/符号规训"到"人与AI对等的协作消熵"演进脉络
+            </p>
+        </div>
+
+        <!-- Top Section: The Three Pillars of AI Coding -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <!-- Column 1: Autonomous Agent -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-amber-400 font-semibold mb-3">
+                        <i data-lucide="cpu" class="h-5 w-5"></i>
+                        <h3>1. 自主智能体流派 (Autonomous Agent)</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                        <strong>代表：</strong> Devin, Swe-agent, OpenDevin<br />
+                        <strong>方法论：</strong> ReAct (感知-规划-执行-反馈), 沙盒运行, 多Agent协同<br />
+                        <strong>认知预设：</strong> 认为 AI 犯错是因为"能力不够、工具不全"，试图通过技术对抗硬顶 LLM 的缺陷，追求完全脱手的长时间自动化。
+                    </p>
+                </div>
+                <div class="bg-amber-950/20 border border-amber-900/30 p-2.5 rounded text-xs text-amber-300 flex items-start gap-1.5 mt-4">
+                    <i data-lucide="shield-alert" class="h-4 w-4 shrink-0 mt-0.5"></i>
+                    <span><strong>瓶颈：</strong> 真实复杂项目成功率极低，易陷入死循环，Token 成本高昂。</span>
+                </div>
+            </div>
+
+            <!-- Column 2: SDD -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-emerald-400 font-semibold mb-3">
+                        <i data-lucide="git-merge" class="h-5 w-5"></i>
+                        <h3>2. 规范驱动流派 (SDD / TDD)</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                        <strong>代表：</strong> Augment Cosmos, Kiro, GitHub Spec Kit<br />
+                        <strong>方法论：</strong> 契约式编程, 行为规范 (Specs), 自动化测试套件, 形式化验证<br />
+                        <strong>认知预设：</strong> 属于"软件工程的"延伸。认为 AI 犯错是因为"没有标准、胡乱发挥"，试图用刚性的符号系统把 AI 锁死在确定性轨道上。
+                    </p>
+                </div>
+                <div class="bg-emerald-950/20 border border-emerald-900/30 p-2.5 rounded text-xs text-emerald-300 flex items-start gap-1.5 mt-4">
+                    <i data-lucide="shield-alert" class="h-4 w-4 shrink-0 mt-0.5"></i>
+                    <span><strong>瓶颈：</strong> 维护 Spec 和测试的成本极高，在复杂业务演进中系统容易变脆。</span>
+                </div>
+            </div>
+
+            <!-- Column 3: CSF -->
+            <div class="bg-teal-950/20 p-5 rounded-lg border border-teal-500/30 flex flex-col justify-between shadow-lg shadow-teal-950/20">
+                <div>
+                    <div class="flex items-center gap-2 text-teal-400 font-bold mb-3">
+                        <i data-lucide="zap" class="h-5 w-5"></i>
+                        <h3>3. CSF 协作规范框架</h3>
+                    </div>
+                    <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                        <strong>定位：</strong> <span class="text-teal-300 font-semibold">人与 AI 对等的人机协作规范框架</span><br />
+                        <strong>方法论：</strong> 基线-log分离, 任务滑动窗口, 三元组激活器, W-协议<br />
+                        <strong>核心预设：</strong> 承认 AI 活性，不进行技术对抗或符号阉割。通过硬性物理隔离控制 AI 读什么，用"目的"作为最小变量激发 AI 的主动性。
+                    </p>
+                </div>
+                <div class="bg-teal-500/10 border border-teal-500/20 p-2.5 rounded text-xs text-teal-300 flex items-start gap-1.5 mt-4">
+                    <i data-lucide="user-check" class="h-4 w-4 shrink-0 mt-0.5"></i>
+                    <span><strong>优势：</strong> 不赌模型升级，靠硬性文件规程与人机分工，在真实复杂项目里极具落地性。</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Middle Section: CSF Three Core Cognitive Assumptions -->
+        <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 mb-8">
+            <h4 class="text-sm font-semibold text-slate-300 mb-3 flex items-center gap-1.5">
+                <span class="w-1.5 h-3 bg-teal-500 rounded-full"></span>
+                CSF 的三大基础认知（基本假设）
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-900/60 p-3 rounded border border-slate-800/80">
+                    <div class="text-xs font-bold text-teal-400 mb-1">公理</div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong>自然语言表达承载的信息量，远高于符号系统。</strong><br />
+                        <span class="text-slate-500">（自然语言能激活 LLM 最大的语义范围，符号系统则会导致语义层截断）</span>
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded border border-slate-800/80">
+                    <div class="text-xs font-bold text-teal-400 mb-1">事实①</div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong>AI 的价值来自 "智能"（活性）。</strong><br />
+                        <span class="text-slate-500">（尝试让他如机械一般可靠、消除其活性，就是在消除他的价值）</span>
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded border border-slate-800/80">
+                    <div class="text-xs font-bold text-teal-400 mb-1">事实②</div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        <strong>语义稀释是不可逆的自然规律。</strong><br />
+                        <span class="text-slate-500">（伴随时间，一个表达承载的信息量不可避免地增长，AI 对其掌控力变弱）</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section: The Evolution & Comparison (SDD vs CSF) + QR Code -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Left: Traditional Software Engineering (SDD) -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-slate-800 md:col-span-1">
+                <h4 class="text-sm font-semibold text-emerald-400 mb-4 flex items-center gap-1.5">
+                    <span>传统"软件工程的"规训路径 (SDD)</span>
+                </h4>
+                <div class="space-y-3 text-xs">
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold">1</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">输入端：符号化约束</p>
+                            <p class="text-slate-400">用严格的 Specs、类型定义、API 契约限制输入，试图在供应侧消除歧义。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold">2</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">执行端：单向填空</p>
+                            <p class="text-slate-400">AI 扮演机械执行的"代码生成器"，丧失了主动分析和意图理解的活性。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 font-bold">3</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">验证端：技术语言对账</p>
+                            <p class="text-slate-400">依赖自动化测试（TDD）和编译检查，无法检出业务认知层面的隐蔽偏差。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle: CSF - Peer-to-Peer Collaboration Framework -->
+            <div class="bg-teal-950/10 p-5 rounded-lg border border-teal-500/20 md:col-span-1">
+                <h4 class="text-sm font-semibold text-teal-400 mb-4 flex items-center gap-1.5">
+                    <span>CSF：人与 AI 对等协作框架</span>
+                </h4>
+                <div class="space-y-3 text-xs">
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center shrink-0 font-bold">1</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">基线-log 分离（物理消熵）</p>
+                            <p class="text-slate-400">核心解决 AI 读了太多不必要信息的顽疾。只读无污染的最新基线，从物理上避免注意力溢出。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center shrink-0 font-bold">2</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">滑动窗口与三元组（抬头/低头平衡）</p>
+                            <p class="text-slate-400">窗口同时承载宏观和具体目的。用正确的自然语言信息，在消费侧激活 AI 的活性与主动性。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center shrink-0 font-bold">3</div>
+                        <div>
+                            <p class="font-semibold text-slate-200">W-协议（业务语言放大）</p>
+                            <p class="text-slate-400">强制将技术实现翻译回业务语言，利用跨语言翻译放大误解的规律，用人类直觉进行拦截。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Knowledge Planet QR Code Card -->
+            <div class="bg-slate-950 p-5 rounded-lg border border-teal-500/30 flex flex-col items-center justify-between md:col-span-1 text-center">
+                <div class="w-full">
+                    <div class="flex items-center justify-center gap-1.5 text-teal-400 font-bold text-sm mb-1">
+                        <i data-lucide="compass" class="h-4 w-4"></i>
+                        <span>知识星球：一个人走</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 mb-3">CSF 理论深度探讨与实践社区</p>
+                </div>
+                
+                <!-- QR Code Container -->
+                <div class="bg-white p-2 rounded-lg shadow-inner mb-3">
+                    <img 
+                        src="../assets/zsxq-qrcode.jpg" 
+                        alt="微信扫码加入星球" 
+                        class="w-28 h-28 object-contain mx-auto"
+                    />
+                </div>
+                
+                <div class="text-[10px] text-slate-400">
+                    <span class="font-semibold text-slate-300">大胖</span> · 星主
+                    <p class="text-[9px] text-slate-500 mt-0.5">微信扫码加入星球，共同演进 CSF</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer: The P2P Core Concept -->
+        <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+            <p class="text-xs text-slate-400 italic">
+                "CSF 的本质是：承认 AI 具有非程序性智能（活性），不再试图用机器逻辑阉割 AI，而是通过硬性的物理隔离（基线-log分离）和目的引导（滑动窗口），建立一个人与 AI 对等、安全传导变化的协作框架。"
+            </p>
+            <p class="text-xs text-slate-500 mt-2">
+                © 2026 CSF (Collaboration Specification Framework)
+                · <a href="https://github.com/huidev2025/CSF" class="text-teal-500 hover:underline">github.com/huidev2025/CSF</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
