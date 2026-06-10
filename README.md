@@ -44,6 +44,8 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 
 两张交互式图谱，帮你在 2 分钟内理解 CSF 在 AI 编程领域的位置：
 
+Two interactive maps to place CSF in the AI-coding landscape — takes about 2 minutes:
+
 | 图谱 | 中文 | English |
 |---|---|---|
 | **AI 编程演进版图**（5 阶段时间线：从补全工具 → 自主 Agent → CSF） | [查看](https://huidev2025.github.io/CSF/visuals/ai-coding-landscape-zh.html) | [View](https://huidev2025.github.io/CSF/visuals/ai-coding-landscape-en.html) |
@@ -189,6 +191,8 @@ CSF is not a single document. It is a layered, **third-generation** system:
 | **csf-minimal** | Anyone, a 5-minute experience |
 | **csf-lite** | Individuals / small teams running real projects |
 | **csf-full** | SME engineering teams / enterprise-grade adoption |
+
+**First time here?** Start with the **[Manifesto](Manifesto-v3-You-Are-Fighting-the-Wrong-War.md)** — why CSF exists, and the Pang Principle (5–10 min read). Then **[QUICKSTART.md](QUICKSTART.md)** for a hands-on intro. The **[Visual Guides](#可视化导图--visual-guides)** place CSF in the broader AI-coding landscape in 2 minutes.
 
 **What csf-full is**: a working set of about **60 core protocol and
 experience files** that constitute an **engineering-grade human–AI
