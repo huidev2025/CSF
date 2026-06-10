@@ -31,6 +31,10 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 
 6. **[essays/ — CSF 理论体系连载（6 篇）](essays/README.md)** —— 从公理到定位的完整推导链，深读者送这里
 
+想看 CSF 在真实项目里是什么样子的 / Want to see CSF in action：
+
+7. **[cases/bang-v3/ — 实战案例：375 次会话节选](cases/bang-v3/README.md)** —— 三段原始对话日志，展示 AI 拒绝错误决策、自主安排复杂计划、用语义日志快速定位根因的四个具体证据
+
 > **第一次来？** 直接看 **[QUICKSTART.md](QUICKSTART.md)** 就够了。
 > **First time here?** Read **[QUICKSTART.md](QUICKSTART.md)** first.
 
@@ -59,6 +63,7 @@ csf/
 ├── Manifesto-v3-You-Are-Fighting-the-Wrong-War.md   # 英文版宣言
 ├── assets/                       # 对外资源（二维码等）
 ├── _dlog/                        # 公开的真实工作日志（协作示范）
+├── cases/                        # 实战案例（原始对话日志节选）
 ├── essays/                       # 思想原稿（CSF 理论体系 6 篇连载）
 └── csf-minimal/                  # 教学最小版
     ├── README.md
@@ -291,8 +296,8 @@ the path from *purpose* to *running code*.
    (README, Manifesto, CONTACT, _dlog, commit history) is being managed by
    CSF in front of you.
 2. It can **detect deviation during execution, loop back to revise design,
-   re-plan the fix, and drive the work to convergence** — a concrete
-   example is in the manifesto.
+   re-plan the fix, and drive the work to convergence** — see the raw
+   dialogue logs in [cases/bang-v3/](cases/bang-v3/README.md).
 3. It dramatically lifted the Owner's design / development / test
    throughput and quality. The Owner does not write code or docs. Every
    serious design defect during the project came from the Owner skipping
@@ -332,6 +337,35 @@ Things to notice while reading it:
 Compared with the industry status quo, very few LLM workflows produce a
 durable, AI-authored project state that the AI itself can rely on across
 long horizons, replans, and role rotations. CSF makes this routine.
+
+### See it in action
+
+**[cases/bang-v3/ — Real-world case: excerpts from 375 sessions](cases/bang-v3/README.md)**
+
+Three raw AI–Owner dialogue logs from an ongoing commercial project, with
+four pieces of documented evidence:
+
+1. **AI pushes back on a wrong decision** — the Owner's original plan was to
+   patch a missing UI component; the AI identified a deeper architectural
+   debt layer, argued against the patch path, and proposed a complete
+   fix instead. The Owner accepted after reading the reasoning.
+2. **AI acts autonomously within a delegated mandate** — instructed to
+   "brief me before executing," the AI independently read the relevant
+   specs, formulated a full execution plan, presented it, and only began
+   modifying files after confirmation.
+3. **AI self-organizes a complex multi-task plan from a four-word
+   instruction** — "make a plan" triggered the AI to scope two
+   inter-dependent workstreams, produce README + progress-table files,
+   and register both in the global project panorama.
+4. **AI traces root causes across 30 sessions of history — from two
+   semantic log files, without RAG** — a timing conflict between two
+   design artefacts (created 30 sessions apart) was identified in minutes
+   by reading their creation timestamps and session numbers, not by
+   searching a vector store.
+
+The logs are unedited. Local file paths in them are not navigable from
+your machine — that is expected; they are a faithful record of the real
+session, not a reproducible demo.
 
 ### Theoretical independence
 
