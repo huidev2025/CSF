@@ -62,6 +62,7 @@ csf在github上的发布和维护
 - [x] **GitHub Pages 开启**（A 方案 / Deploy from `main`）：站点 `https://huidev2025.github.io/CSF/`；README 顶部加网页阅读入口；不上独立域名（等需求自己长出来）
 - [x] **可视化导图上线**：`visuals/` 目录，4 个 HTML（中英各 2 张）：AI 编程演进版图 + CSF 三流派对位图谱；README 加「可视化导图」双语表格入口；commit `3cabbf7`
 - [x] **二维码更新**：`assets/zsxq-qrcode-2.png` 替换两个中文 HTML 里的过期 CDN 链接；commit `a99c536`
+- [x] **实战案例上线**：`cases/bang-v3/` 目录（session 373–375 原始日志节选 + README），README 中英文双入口（「从哪开始读」第 7 条 + 英文 `See it in action` 章节）；commit `f02d6f3`
 - [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
 - [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
@@ -76,14 +77,15 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-08（第七轮对话，主题：可视化导图上线）
+- **日期**：2026-06-10（第八轮对话，主题：实战案例上线）
 - **做了什么**：
-  1. **可视化导图上线**（commit `3cabbf7`）：新建 `visuals/` 目录，4 个交互式 HTML——`ai-coding-landscape-zh/en.html`（5 阶段演进时间线）+ `csf-positioning-zh/en.html`（三流派对比：Autonomous Agent / SDD / CSF）。README 新增「可视化导图 / Visual Guides」双语表格入口，链到 GitHub Pages 地址。
-  2. **二维码更新**（commit `a99c536`）：Owner 提供新图片 `zsxq-qrcode-2.png`，原来两个中文 HTML 里的 CloudFront 预签名 URL（Expires ≈ 2026-06-21）换为本地 `../assets/zsxq-qrcode-2.png`；原 `zsxq-qrcode.jpg` 不动（CONTACT.md 等处仍引用）。
+  1. **实战案例上线**（commit `f02d6f3`）：新建 `cases/bang-v3/` 目录，放入 bang-v3 项目 session 373–375 的三段原始对话日志（已剥 Obsidian frontmatter，文件名去掉冒号）；同时在 `_dlog/` 放入三个原始文件作为存档。
+  2. **cases/bang-v3/README.md**：项目背景介绍 + 日志内容说明 + **四个 CSF 差异化优势的具体证据**（附精确行号）：① AI 拒绝错误决策并给出理由（dlog-374 第 318 行）；② 请示后自主行动（dlog-375 第 79/131 行）；③ 自主安排复杂计划（dlog-373 第 349/427/448 行）；④ 语义日志支撑快速根因定位、不依赖 RAG（dlog-373 第 287 行）。
+  3. **README.md 更新**：中文「从哪开始读」增第 7 条（cases/bang-v3/ 入口）；仓库结构补 `cases/` 行；英文 section 新增 `See it in action` 章节（四条证据英文描述）；修正 CSF 全名（Context-Session → Collaboration Specification）。
 - **关键判断**：
-  - `visuals/` 放 GitHub Pages 可直接渲染，README 入口让新读者在「从哪开始读」之后 2 分钟内建立 CSF 定位感——比纯文字更快。
-  - 英文版导图用 GitHub 仓库卡片（无二维码），中文版用知识星球二维码——分受众，不混用。
-- **未推送**：无。`dlog_004`（session 6）和 `dlog_005`（session 7）均未产出，顺延。
+  - cases/ 与 _dlog/ 定位不同：_dlog 是"仓库建设日志"，cases 是"CSF 被使用的外部项目样本"，两者分开放。
+  - 案例的价值在于差异化优势有原始日志行号支撑，不是空泛主张。
+- **未推送**：无，本轮所有变更已推送。`dlog_004/005/006` 均顺延。
 
 ---
 
@@ -104,13 +106,13 @@ csf在github上的发布和维护
   7. ~~**essays/ 上线**~~ — 完成（6 篇原稿 + 索引页）。
   8. ~~**GitHub Pages**~~ — 完成（A 方案，无独立域名）。
   9. ~~**可视化导图**~~ — 完成（`visuals/` 4 个 HTML，README 双语表格入口）。
-  10. **SEO 路径 ④ 外部信号**——Owner 另开专题处理。备选动作：知识星球开张 / Hacker News Show HN / V2EX-即刻-少数派 中文社区 / 给 awesome-* 类列表提 PR。
+  10. **SEO 路径 ④ 外部信号**——Owner 另开专题处理。备选动作：知识星球开张 / Hacker News Show HN / V2EX-即刻-少数派 中文社区 / 给 awesome-* 类列表提 PR。cases/ 可作为「百说不如看原始记录」的佐证材料附在帖子里。
   11. **SEO 路径 ⑤ 首篇专栏文章**——载体已定（仓库内 essays/ + Pages），题目未定，5 个备选：*Why your RAG keeps growing* / *Past prompt engineering* / *395 sessions on Lost in the Middle* / *The Pang Principle one-pager* / *CSF dogfoods this repo*。在路径 ④ 之后接上。
   12. **`dlog_004/005` 补档**——session 6（v1.0.0+SEO+essays+Pages）和 session 7（可视化导图）两轮日志均未产出，顺延。
   13. **csf-lite 导读页**（上轮遗留，可选）。
   14. **中文文件名 URL 编码**：遇到 404 再处理，不挂就不动。
 
-- **下轮开场建议**：先问 Owner 路径 ④ 外部信号进展（知识星球 / HN / V2EX 等），再据此决定路径 ⑤ 题目和切入角度。
+- **下轮开场建议**：先问 Owner 路径 ④ 外部信号进展（知识星球 / HN / V2EX 等），再据此决定路径 ⑤ 题目和切入角度。cases/ 已上线，可作为路径 ④ 投稿时的佐证材料（"here's the raw proof"）。
 
 - **需要的资料**：现有仓库内容 + 「备忘·理论参考资料」。
 
@@ -124,7 +126,7 @@ csf在github上的发布和维护
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
 - **GitHub Pages**：A 方案（默认 Jekyll，Deploy from `main`），`https://huidev2025.github.io/CSF/`。中文文件名一般可访问，遇到 404 再处理。
-- **未同步到 GitHub 的事项**：本轮 context.md 更新待推。`dlog_004`（session 6）和 `dlog_005`（session 7）均顺延。
+- **未同步到 GitHub 的事项**：本轮 context.md 更新待推（收尾后推）。`dlog_004/005/006` 均顺延。
 
 ---
 
