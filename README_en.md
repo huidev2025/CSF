@@ -35,11 +35,11 @@ In order, takes 5 minutes to start:
 
 Deeper Theory:
 
-6. **[essays/ — CSF Column Shelf](essays/README.md)** — "Working with Intelligence" flagship series, deeply analyzing the four engineering systems and collaborative philosophies.
+6. **[essays/ — CSF Column Shelf](essays/README_en.md)** — "Working with Intelligence" flagship series, deeply analyzing the four engineering systems and collaborative philosophies.
 
 See it in Action:
 
-7. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
+7. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README_en.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
 
 > **First time here?** Start with **[QUICKSTART.md](QUICKSTART.md)**.
 
@@ -151,7 +151,7 @@ The Owner stayed at the level of *purpose and judgment* throughout — articulat
 ### What CSF Has Demonstrably Proved
 
 1. It can **autonomously plan and track work** — this very repository (README, Manifesto, CONTACT, _dlog, commit history) is being managed by CSF in front of you.
-2. It can **detect deviation during execution, loop back to revise design, re-plan the fix, and drive the work to convergence** — see the raw dialogue logs in [cases/bang-v3/](cases/bang-v3/README.md).
+2. It can **detect deviation during execution, loop back to revise design, re-plan the fix, and drive the work to convergence** — see the raw dialogue logs in [cases/bang-v3/](cases/bang-v3/README_en.md).
 3. It dramatically lifted the Owner's design / development / test throughput and quality. The Owner does not write code or docs. Every serious design defect during the project came from the Owner skipping a check — and every one of them was caught and repaired by the AI under the CSF protocol.
 4. **Plans change. The AI's continuity holds.** Across hundreds of sessions and many mid-flight re-plans, the AI consistently knew where it was, where it came from, and where it was going.
 

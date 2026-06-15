@@ -1,4 +1,11 @@
+---
+title: CSF 专栏书架
+layout: default
+---
+
 # CSF 专栏书架 / The CSF Column
+
+**简体中文** &#124; [English](README_en.md)
 
 这里是 CSF（协作规范框架）的深度思想沉淀区。不仅记录了我们如何将 AI 真正作为“协作者”来对待的工程原理，也包含了整个方法论随实践不断自举而产生的哲学演进。
 
