@@ -1,3 +1,8 @@
+---
+title: 案例分析：帮找 v3 开发日志节选 (Case Study - bang-v3)
+layout: default
+---
+
 # 案例：帮找 v3 开发日志节选（session 373–375）
 
 <div align="center">
