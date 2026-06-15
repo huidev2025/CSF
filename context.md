@@ -77,20 +77,25 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-15（第九轮对话，主题：旗舰连载《与智能共事》上线 与 主页中英文独立 Tab 化重构）
+- **日期**：2026-06-15（第九轮对话，主题：旗舰连载《与智能共事》上线、中英文独立 Tab 化重构、案例英文补全与 Pages 两端跳转自愈修复）
 - **做了什么**：
   1. **旗舰连载上线**：从 Obsidian Notes 迁移并清洗了 12 篇最新的中英文文章。清洗过程去了复杂的 Obsidian frontmatter 属性头部，保留轻量 Markdown 格式。
-  2. **图片迁移与路径转换**：迁移了配图到 [essays/attachments/](essays/attachments/) 目录下，并以标准 Markdown 语法 `![](attachments/...)` 在文件中自动纠正所有的本地 Wiki图片引用。
+  2. **图片迁移与路径转换**：迁移了配图到 [essays/attachments/](essays/attachments/) 目录下（含 `Monica_` 系列执行全景配图和通信系统图）。
   3. **专栏化重构 & 历史原稿归档**（v3.0 -> v4.0）：确认原有的老 6 篇学术原稿不足以承担最新 v4.0 的深刻工程细节与体系化视角，遂将其迁移归档至 [essays/history-archives/](essays/history-archives/) 目录下。
   4. **书架总入口刷新**：重构了 [essays/README.md](essays/README.md)，打造全新的专栏中英文索引与导读页。
   5. **主页 README 中双语独立 Tab 化重构**：解决原有 README 单文件塞入中英混合文案导致体积臃肿、对外国读者不友好的硬伤。采用了国际开源大厂的**平行文件路由（Parallel File Routing）规范**：
      - 主保 `README.md` 为 100% 纯净、极简自洽的**中文完整版**；
      - 新建 `README_en.md` 为 100% 纯净自洽、英文化排版的**英文完整版**；
-     - 在两份 README 顶端设计了高度显眼、带有悬浮选中态视觉感的 HTML 平行语言切换器（Tab）：“**简体中文** | **English**”，实现极致的一键秒切极速阅读体验。
+     - 在两份 README 顶端设计了“**简体中文** | **English**”语言切换 Tab，一键秒切。
+  6. **实战案例极速翻译与双语 Tab 补齐**：
+     - 新建 [cases/bang-v3/README_en.md](cases/bang-v3/README_en.md)，专为英文受众完整重构了实战背景。包含了四大惊艳差异化证据的高维精准地地道地英文翻译（Proof 1–4），并将具体行号链接直接无缝指向了原始对话中文 log 的特定锚点。
+     - 修改 [cases/bang-v3/README.md](cases/bang-v3/README.md)，在其顶部加入中英平行语言 Tab 切换栏，打通了案例实操层的双语无损体验。
+  7. **自愈修复 Pages 双端跳转与渲染 404/白屏问题**：
+     - 诊断后定位了双重物理硬伤：① 两个非主 markdown 文件没有 Jekyll 需要的 **YAML Front Matter** 头部头部，导致 Pages 极其过滤而不渲染；② HTML 的原生 `<a>` 相对链接无法在 Pages 编译时被自动重写重合，造成在 Pages 网页上点击直接跳转 `.md` 实体文件 404，在 GitHub 源码端又难以适配。
+     - **完美合龙**：在 `README_en.md` 与 `cases/bang-v3/README_en.md` 顶端配置了 `layout: default` 与主 title 的 Front Matter 属性，让它们在 Pages 上顺利渲染精美样式；同时将中英文所有的切换 Tab 统一改为标准的 Markdown 内嵌居中链接格式（如 `[English](README_en.md)`）。使 GitHub 的 `jekyll-relative-links` 官方插件在 Pages 编译时自动将其转为 `.html` 后缀并自带精美样式，在源码网页点击又能无损跳转到 `.md`。
 - **关键判断**：
   - 原有 6 篇老学术稿升级为“历史手稿归档”，能极佳反映方法论的迭代纵深，同时也清空了主页干扰，让读者直面更成熟、更有煽动感的旗舰连载。
-  - 采用 Regex 自动重构将 Obsidian 的内部图片引用还原为标准的 Markdown，使得 GitHub 与 Pages 能天然渲染不受其困扰。
-  - 拒绝了使用 HTML 做折叠折展（details）或复杂的 Hack 选项，以标准 `README_en.md` 并用头部精美语言切换组件来实现 GitHub 上心智成本极低的“Tab 化”顺滑体验。
+  - 采用标准并行路由并用头部极简 markdown 居中切换组件来实现双端完美自愈。
 - **未推送**：无，本轮所有变更已全部推送。
 
 ---
