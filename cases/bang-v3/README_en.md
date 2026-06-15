@@ -5,7 +5,7 @@ layout: default
 
 # Case Study: bang-v3 Development Log Excerpts (Sessions 373–375)
 
-<div align="center">
+<div align="center" markdown="1">
 
 [简体中文](README.md) | **English**
 

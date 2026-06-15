@@ -6,7 +6,7 @@ layout: default
 
 # CSF — Collaboration Specification Framework
 
-<div align="center">
+<div align="center" markdown="1">
 
 **简体中文** | [English](README_en.md)
 

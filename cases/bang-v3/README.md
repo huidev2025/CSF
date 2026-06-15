@@ -5,7 +5,7 @@ layout: default
 
 # 案例：帮找 v3 开发日志节选（session 373–375）
 
-<div align="center">
+<div align="center" markdown="1">
 
 **简体中文** | [English](README_en.md)
 
