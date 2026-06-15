@@ -5,11 +5,7 @@ layout: default
 
 # 案例：帮找 v3 开发日志节选（session 373–375）
 
-<div align="center" markdown="1">
-
 **简体中文** | [English](README_en.md)
-
-</div>
 
 > 这是 CSF（Collaboration Specification Framework）在一个真实项目中连续运作的原始记录。
 > 三段日志，展示了 CSF 在处理**系统性设计缺口**时的实际运转方式。
