@@ -1,3 +1,8 @@
+---
+title: CSF — 协作规范框架 (Collaboration Specification Framework)
+layout: default
+---
+
 # CSF — Collaboration Specification Framework
 
 <div align="center">
