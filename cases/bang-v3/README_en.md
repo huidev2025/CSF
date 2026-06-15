@@ -5,7 +5,7 @@ layout: default
 
 # Case Study: bang-v3 Development Log Excerpts (Sessions 373–375)
 
-[简体中文](README.md) | **English**
+[简体中文](README.md) &#124; **English**
 
 > This is the original, raw track record of CSF (Collaboration Specification Framework) running continuously in a real-world commercial project.
 > These three sessions demonstrate how CSF functions in practice when uncovering, diagnosing, and repairing a **systemic modular gap**.

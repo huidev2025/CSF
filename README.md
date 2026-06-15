@@ -6,7 +6,7 @@ layout: default
 
 # CSF — Collaboration Specification Framework
 
-**简体中文** | [English](README_en.md)
+**简体中文** &#124; [English](README_en.md)
 
 > 一种在 LLM 本性之内、用「自然语言 + 目的」设计人机协同工作方式的工程方法。
 > A human-AI collaboration framework that works **with** LLM nature, not around it. Built on natural language and purpose — making RAG, agent orchestration, and elaborate prompt engineering **unnecessary, not unavailable**. Home of the Pang Principle.
