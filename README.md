@@ -1,5 +1,6 @@
 ---
 title: CSF — 协作规范框架 (Collaboration Specification Framework)
+permalink: /index.html
 layout: default
 ---
 
