@@ -40,6 +40,7 @@ Deeper Theory:
 See it in Action:
 
 7. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README_en.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
+8. **[cases/paper1/ — Paper Writing: Full Process](cases/paper1/README_en.md)** — 12 dialogue sessions + collaboration memory file + paper manuscript, completed using only the csf-minimal context.md template.
 
 > **First time here?** Start with **[QUICKSTART.md](QUICKSTART.md)**.
 

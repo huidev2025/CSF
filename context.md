@@ -63,6 +63,7 @@ csf在github上的发布和维护
 - [x] **可视化导图上线**：`visuals/` 目录，4 个 HTML（中英各 2 张）：AI 编程演进版图 + CSF 三流派对位图谱；README 加「可视化导图」双语表格入口；commit `3cabbf7`
 - [x] **二维码更新**：`assets/zsxq-qrcode-2.png` 替换两个中文 HTML 里的过期 CDN 链接；commit `a99c536`
 - [x] **实战案例上线**：`cases/bang-v3/` 目录（session 373–375 原始日志节选 + README），README 中英文双入口（「从哪开始读」第 7 条 + 英文 `See it in action` 章节）；commit `f02d6f3`
+- [x] **论文写作案例上线**：`cases/paper1/` 目录（arXiv 中英文投稿稿 + 12 轮 dlog 原始会话记录 + 中英文 README），README 中英文双入口（「从哪开始读」第 8 条 + 英文 `See it in action` 第 8 条）；commit 待推送
 - [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
 - [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
@@ -77,26 +78,13 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-15（第九轮对话，主题：旗舰连载《与智能共事》上线、中英文独立 Tab 化重构、案例英文补全与 Pages 两端跳转自愈修复）
+- **日期**：2026-06-17（第十轮对话，主题：论文写作案例上线 + 论文审查讨论收尾）
 - **做了什么**：
-  1. **旗舰连载上线**：从 Obsidian Notes 迁移并清洗了 12 篇最新的中英文文章。清洗过程去了复杂的 Obsidian frontmatter 属性头部，保留轻量 Markdown 格式。
-  2. **图片迁移与路径转换**：迁移了配图到 [essays/attachments/](essays/attachments/) 目录下（含 `Monica_` 系列执行全景配图和通信系统图）。
-  3. **专栏化重构 & 历史原稿归档**（v3.0 -> v4.0）：确认原有的老 6 篇学术原稿不足以承担最新 v4.0 的深刻工程细节与体系化视角，遂将其迁移归档至 [essays/history-archives/](essays/history-archives/) 目录下。
-  4. **书架总入口刷新**：重构了 [essays/README.md](essays/README.md)，打造全新的专栏中英文索引与导读页。
-  5. **主页 README 中双语独立 Tab 化重构**：解决原有 README 单文件塞入中英混合文案导致体积臃肿、对外国读者不友好的硬伤。采用了国际开源大厂的**平行文件路由（Parallel File Routing）规范**：
-     - 主保 `README.md` 为 100% 纯净、极简自洽的**中文完整版**；
-     - 新建 `README_en.md` 为 100% 纯净自洽、英文化排版的**英文完整版**；
-     - 在两份 README 顶端设计了“**简体中文** | **English**”语言切换 Tab，一键秒切。
-  6. **实战案例极速翻译与双语 Tab 补齐**：
-     - 新建 [cases/bang-v3/README_en.md](cases/bang-v3/README_en.md)，专为英文受众完整重构了实战背景。包含了四大惊艳差异化证据的高维精准地地道地英文翻译（Proof 1–4），并将具体行号链接直接无缝指向了原始对话中文 log 的特定锚点。
-     - 修改 [cases/bang-v3/README.md](cases/bang-v3/README.md)，在其顶部加入中英平行语言 Tab 切换栏，打通了案例实操层的双语无损体验。
-  7. **自愈修复 Pages 双端跳转与渲染 404/白屏问题**：
-     - 诊断后定位了双重物理硬伤：① 两个非主 markdown 文件没有 Jekyll 需要的 **YAML Front Matter** 头部头部，导致 Pages 极其过滤而不渲染；② HTML 的原生 `<a>` 相对链接无法在 Pages 编译时被自动重写重合，造成在 Pages 网页上点击直接跳转 `.md` 实体文件 404，在 GitHub 源码端又难以适配。
-     - **完美合龙**：在 `README_en.md` 与 `cases/bang-v3/README_en.md` 顶端配置了 `layout: default` 与主 title 的 Front Matter 属性，让它们在 Pages 上顺利渲染精美样式；同时将中英文所有的切换 Tab 统一改为标准的 Markdown 内嵌居中链接格式（如 `[English](README_en.md)`）。使 GitHub 的 `jekyll-relative-links` 官方插件在 Pages 编译时自动将其转为 `.html` 后缀并自带精美样式，在源码网页点击又能无损跳转到 `.md`。
-- **关键判断**：
-  - 原有 6 篇老学术稿升级为“历史手稿归档”，能极佳反映方法论的迭代纵深，同时也清空了主页干扰，让读者直面更成熟、更有煽动感的旗舰连载。
-  - 采用标准并行路由并用头部极简 markdown 居中切换组件来实现双端完美自愈。
-- **未推送**：无，本轮所有变更已全部推送。
+  1. **论文写作案例发布**：创建 `cases/paper1/`，含 arXiv 中英文投稿稿、12 轮 dlog 原始会话记录、中英文 README。dlog 原样搬入（保留工具调用痕迹），可核查。
+  2. **README 入口更新**：中英文 README 各新增第 8 条。
+  3. 论文审查讨论（详見 `_dlog_10`）：14 条逐条回应，7 认可、6 驳回、1 Owner 裁量。修改待执行。
+- **关键判断**：dlog 不清理就发——清理错了比不清理更糟。原始日志价值在可核查而非可阅读。
+- **未推送**：本轮所有变更待推送（新增 cases/paper1/ + README 更新 + context.md）
 
 ---
 
