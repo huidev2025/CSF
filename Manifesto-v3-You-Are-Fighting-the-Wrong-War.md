@@ -95,9 +95,9 @@ Behind the door is the full framework. I'd like to invite you to explore this un
 
 > **Axiom.** A natural-language expression carries far more information than a symbolic one.
 
-> **Fact ①.** The value of artificial intelligence comes from its *intelligence.* Trying to make it as reliable as a machine is exactly the act of destroying that value.
+> **Fact ①.** The value of AI comes from its intelligence. Trying to make it as mechanically predictable as a machine eliminates that value.
 
-> **Fact ②.** Over time, the information a single expression has to carry grows — inevitably, everywhere, without exception — and its semantics get diluted.
+> **Fact ②.** Over time, a concept inevitably accumulates meaning—and its original semantics get diluted.
 
 ---
 
