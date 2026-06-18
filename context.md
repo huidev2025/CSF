@@ -81,23 +81,26 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-19（第十二轮对话，主题：IEEE Software 投稿材料上线 + dlog_17 补全 + Closing Remarks 展示页）
+- **日期**：2026-06-19（第十二轮对话，主题：IEEE Software 投稿材料 + dlog_17 + Closing Remarks 中英展示页）
 - **做了什么**：
-  1. **IEEE Software 投稿材料上线**：新建 `cases/paper1/ieee-software/`，复制 6 个文件（cover_letter.docx, previously_published_statement.docx, statement.txt, submission.docx, submission.html, submission.md）。
-  2. **dlog_17 新增**：`_dlog_17_真正的结束.md`（IEEE Software 投稿全过程记录）复制至 `cases/paper1/dlog/`。
+  1. **IEEE Software 投稿材料上线**：新建 `cases/paper1/ieee-software/`，复制 6 个文件。
+  2. **dlog_17 新增**：IEEE Software 投稿全过程记录。
   3. **_notes_.md 更新**：补全英文 pandoc 命令 + "少数派/sspai" 备忘。
-  4. **Closing Remarks 展示页**：Owner 在 `dlog/Closing Remarks/` 放入 5 张 dlog_17 结尾截图。新建 `closing-remarks.md`（中文）和 `closing-remarks-en.md`（英文）展示页，每张图配标题和引用摘要。英文页为翻译版。
-  5. **索引全面更新**：paper1 中英文 README 从 16 轮更新为 17 轮，新增 ieee-software 产出物条目 + closing-remarks 页面入口 + dlog_17 索引行（含 📜 链接）。dlog/README.md 同步新增 dlog_17 和 Closing Remarks。根 README paper1 条目从 12 轮更新为 17 轮 + IEEE 投稿。
-- **关键判断**：`_notes_.md` 源文件与目标文件有差异（源多了英文 pandoc + 少数派备忘），已对齐。
-- **未推送**：本轮所有变更待推送（ieee-software/ 新增 + dlog_17 + _notes_ 更新 + 全部 README 更新 + context.md）
+  4. **Closing Remarks 展示页**：Owner 放入 5 张 dlog_17 结尾截图（`dlog/Closing Remarks/`）。新建 `closing-remarks.md`（中文，摘要+引文）和 `closing-remarks-en.md`（英文，完整逐句翻译，对话格式保留 User/Copilot 标记，含指向中文原文的链接）。
+  5. **索引全面更新**：paper1 中英文 README 16→17 轮，新增 ieee-software + closing-remarks 入口 + dlog_17 索引行（📜）。dlog/README.md + 根 README 同步更新。
+  6. **英文版 Closing Remarks 重写**：Owner 要求英文页展示原文翻译而非摘要，从 dlog_17 原文逐句翻译为英文，保留对话格式。
+- **关键判断**：英文展示页应为完整翻译而非摘要，因为原文本身就是论文最有力的外部证明，翻译需保留对话感。
+- **已推送**：commit `fd6b27b` + `5c3be10`，20 文件，+1802/-20 行。
 
 ---
 
 ## §D 下次对话
 
-- **目的**：推送本轮变更（IEEE 投稿材料 + dlog_17 + 全部索引更新）。Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章在外界分发）落地。
+- **目的**：Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章在外界分发）落地。
 
-- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪，cases/paper1 已更新至 17 轮 dlog + v1.6 论文稿 + IEEE Software 投稿材料。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
+- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪，cases/paper1 已更新至 17 轮 dlog + v1.6 论文稿 + IEEE Software 投稿材料 + Closing Remarks 中英展示页。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
+
+- **下轮开场建议**：先问 Owner 路径 ④ 外部信号进展（知识星球 / HN / V2EX 等），再据此决定路径 ⑤ 题目和切入角度。cases/paper1 的 Closing Remarks 展示页（特别是英文翻译版）可作为投稿时的佐证材料——"the paper's thesis is proven in real time by the AI that wrote it"。
 
 - **后续工作项**：
 
