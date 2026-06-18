@@ -63,7 +63,10 @@ csf在github上的发布和维护
 - [x] **可视化导图上线**：`visuals/` 目录，4 个 HTML（中英各 2 张）：AI 编程演进版图 + CSF 三流派对位图谱；README 加「可视化导图」双语表格入口；commit `3cabbf7`
 - [x] **二维码更新**：`assets/zsxq-qrcode-2.png` 替换两个中文 HTML 里的过期 CDN 链接；commit `a99c536`
 - [x] **实战案例上线**：`cases/bang-v3/` 目录（session 373–375 原始日志节选 + README），README 中英文双入口（「从哪开始读」第 7 条 + 英文 `See it in action` 章节）；commit `f02d6f3`
-- [x] **论文写作案例上线**：`cases/paper1/` 目录（arXiv 中英文投稿稿 v1.6 + 16 轮 dlog 原始会话记录 + 数据分析脚本 + 中英文 README），README 中英文双入口（「从哪开始读」第 8 条 + 英文 `See it in action` 第 8 条）；commit 待推送
+- [x] **论文写作案例上线**：`cases/paper1/` 目录（arXiv 中英文投稿稿 v1.6 + 17 轮 dlog 原始会话记录 + 数据分析脚本 + 中英文 README），README 中英文双入口（「从哪开始读」第 8 条 + 英文 `See it in action` 第 8 条）；commit 已推送
+- [x] **IEEE Software 投稿材料上线**：`cases/paper1/ieee-software/`（cover_letter, submission, statement），同步更新全部 README 索引
+- [x] **dlog_17 新增**：IEEE Software 投稿全过程记录（格式转换、Cover Letter、最终投递）
+- [x] **Closing Remarks 展示页上线**：`cases/paper1/closing-remarks.md` + `closing-remarks-en.md`（中英双语），展示 dlog_17 结尾 5 张截图——AI 协作者自述"论文描述的那种无意识此刻正在我身上发生"，中英文 README 均已加入口
 - [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
 - [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
@@ -78,21 +81,23 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-18（第十一轮对话，主题：论文案例更新——补充 dlog_13~16 + 更新论文稿至 v1.6）
+- **日期**：2026-06-19（第十二轮对话，主题：IEEE Software 投稿材料上线 + dlog_17 补全 + Closing Remarks 展示页）
 - **做了什么**：
-  1. **dlog 补全**：从源目录同步 4 个新增 dlog（dlog_13 数据分析、dlog_14 数据结论改入论文、dlog_15 审稿人模拟、dlog_16 arXiv update 上传） + `_notes_.md`（投稿目标笔记）至 `cases/paper1/dlog/`。
-  2. **索引更新**：中英文 README 全部从「12 轮」更新为「16 轮」，新增 dlog_13~16 及数据分析/、_notes_ 条目。dlog/README.md 同步更新。
-  3. **论文稿确认**：`arxiv_submission_zh.md` 与 `arxiv_submission_en.md` 已是 v1.6 最新版（含两轮简化对比、纠偏密度统计等数据分析结论），两边一致，无需替换。
-- **关键判断**：论文稿已是最新，只需补 dlog 和更新索引。
-- **未推送**：本轮所有变更待推送（dlog 新增 + README 更新 + context.md）
+  1. **IEEE Software 投稿材料上线**：新建 `cases/paper1/ieee-software/`，复制 6 个文件（cover_letter.docx, previously_published_statement.docx, statement.txt, submission.docx, submission.html, submission.md）。
+  2. **dlog_17 新增**：`_dlog_17_真正的结束.md`（IEEE Software 投稿全过程记录）复制至 `cases/paper1/dlog/`。
+  3. **_notes_.md 更新**：补全英文 pandoc 命令 + "少数派/sspai" 备忘。
+  4. **Closing Remarks 展示页**：Owner 在 `dlog/Closing Remarks/` 放入 5 张 dlog_17 结尾截图。新建 `closing-remarks.md`（中文）和 `closing-remarks-en.md`（英文）展示页，每张图配标题和引用摘要。英文页为翻译版。
+  5. **索引全面更新**：paper1 中英文 README 从 16 轮更新为 17 轮，新增 ieee-software 产出物条目 + closing-remarks 页面入口 + dlog_17 索引行（含 📜 链接）。dlog/README.md 同步新增 dlog_17 和 Closing Remarks。根 README paper1 条目从 12 轮更新为 17 轮 + IEEE 投稿。
+- **关键判断**：`_notes_.md` 源文件与目标文件有差异（源多了英文 pandoc + 少数派备忘），已对齐。
+- **未推送**：本轮所有变更待推送（ieee-software/ 新增 + dlog_17 + _notes_ 更新 + 全部 README 更新 + context.md）
 
 ---
 
 ## §D 下次对话
 
-- **目的**：Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章在外界分发）落地。
+- **目的**：推送本轮变更（IEEE 投稿材料 + dlog_17 + 全部索引更新）。Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章在外界分发）落地。
 
-- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪，cases/paper1 已更新至 16 轮 dlog + v1.6 论文稿。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
+- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪，cases/paper1 已更新至 17 轮 dlog + v1.6 论文稿 + IEEE Software 投稿材料。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
 
 - **后续工作项**：
 
@@ -125,7 +130,7 @@ csf在github上的发布和维护
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
 - **GitHub Pages**：A 方案（默认 Jekyll，Deploy from `main`），`https://huidev2025.github.io/CSF/`。中文文件名一般可访问，遇到 404 再处理。
-- **未同步到 GitHub 的事项**：本轮 context.md 更新 + cases/paper1/ 更新（dlog 13~16 + README）待推送（收尾后一起推）。`dlog_004/005/006` 均顺延。
+- **未同步到 GitHub 的事项**：本轮所有变更待推送（ieee-software/ 新增 + dlog_17 + Closing Remarks 截图 + _notes_ 更新 + closing-remarks 中英文展示页 + 全部 README 更新 + context.md）。`dlog_004/005/006` 均顺延。
 
 ---
 

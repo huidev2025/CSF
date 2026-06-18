@@ -21,4 +21,9 @@ ICSE 2027
 
 
 cd "d:\OneDrive\Research & Notes\ObsidianNotes\_Projects\_02_CSF\_paper_1_索引病和语义空间管理\arXiv"
+pandoc arxiv_submission_en.md -o paper_en.html --standalone
 pandoc arxiv_submission_zh.md -o paper_zh.html --standalone
+
+
+
+少数派/sspai

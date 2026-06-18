@@ -39,6 +39,8 @@
 | `_dlog_14_数据结论改入论文.md` | 将数据分析发现纳入论文正文 |
 | `_dlog_15_来自苛刻、世故、油条的审稿人的意见.md` | 模拟严苛审稿人反馈 + Owner 回应 |
 | `_dlog_16_结束.md` | arXiv update 上传（v1.6 定稿） |
+| `_dlog_17_真正的结束.md` | IEEE Software 投稿——格式转换、Cover Letter、最终投递 |
+| `Closing Remarks/` | dlog_17 结尾截图（5 张）——[查看展示页](../closing-remarks.md) |
 | `_dlog_paper1_issues.md` | 问题追踪日志 |
 | `data-analysis/` | 分析脚本、统计结果、增强建议 |
 | `_notes_.md` | 投稿目标笔记（IEEE Software / ICSE 等） |

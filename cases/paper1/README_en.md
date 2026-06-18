@@ -7,7 +7,7 @@ layout: default
 
 [简体中文](README.md) &#124; **English**
 
-> An academic paper written using the CSF minimal version (`context.md` template). 16 dialogue logs + bilingual submissions + collaboration memory file, documenting the full process from "discussing the skeleton" to "arXiv submission" to "data analysis and revision."
+> An academic paper written using the CSF minimal version (`context.md` template). 17 dialogue logs + bilingual submissions + collaboration memory file, documenting the full process from "discussing the skeleton" to "arXiv submission" to "data analysis and revision" to "IEEE Software submission."
 
 ---
 
@@ -26,11 +26,13 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 | [context.md](context.md) | Collaboration memory file used during writing (csf-minimal template instance) |
 | [arxiv_submission_zh.md](arxiv_submission_zh.md) | Chinese arXiv submission (primary, finalized) |
 | [arxiv_submission_en.md](arxiv_submission_en.md) | English arXiv submission (v1.6, synced with Chinese) |
-| [dlog/](dlog/) | 16 raw dialogue logs + analysis scripts + submission notes |
+| [dlog/](dlog/) | 17 raw dialogue logs + analysis scripts + submission notes |
+| [ieee-software/](ieee-software/) | IEEE Software submission materials (cover letter, submission, statement) |
+| [closing-remarks-en.md](closing-remarks-en.md) | Screenshots of "Closing Remarks" from dlog_17 — the paper's most powerful external proof |
 
 ---
 
-## What the 16 Sessions Covered
+## What the 17 Sessions Covered
 
 | File | Core Event |
 |---|---|
@@ -50,6 +52,7 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 | dlog_14 | Incorporating data findings into the paper (v1.5 → v1.6) |
 | dlog_15 | Simulated harsh reviewer feedback + Owner's point-by-point response |
 | dlog_16 | arXiv update upload (v1.6 finalized) |
+| dlog_17 | IEEE Software submission — formatting, cover letter, final submission → [📜 Closing Remarks](closing-remarks-en.md) |
 | dlog_paper1_issues | Issue tracking log (14 issues with disposition) |
 | [data-analysis/](dlog/data-analysis/) | Analysis scripts (Python), statistical results, paper enhancement recommendations |
 | _notes_ | Submission target notes (IEEE Software / ICSE, etc.) |
@@ -60,7 +63,7 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 
 The paper was written using the basic pattern from [csf-minimal](../../csf-minimal/):
 
-- **`context.md` as collaboration memory**: read at session start, updated at session end. Across 16 sessions, the AI never needed the Owner to re-explain background.
+- **`context.md` as collaboration memory**: read at session start, updated at session end. Across 17 sessions, the AI never needed the Owner to re-explain background.
 - **One purpose per session**: collect materials, or revise structure, or polish language — focused, not mixed.
 - **Dialogue logs kept separately**: the files in dlog/ are complete records of each session, separate from the manuscript.
 

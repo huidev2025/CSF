@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>submission</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1
+id="when-adding-more-rules-made-ai-worse-index-sickness-and-how-we-cured-it">When
+Adding More Rules Made AI Worse: Index Sickness and How We Cured It</h1>
+<p><strong>Hui Zhang (张慧)</strong> Shenzhen Yunxi Technology Co., Ltd.
+zhanghui@ecloudriver.com</p>
+<p><strong>Shuren Song (宋树仁)</strong> Information Technology Center,
+Tsinghua University songsr@tsinghua.edu.cn</p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>We built a symbolic identifier system, accumulated defensive rules in
+our AI’s system prompt, and refined our constraints over 220 sessions.
+By Session 222, the AI was confidently reciting completed work that had
+no connection to physical files. We had built what we now call
+<strong>Index Sickness</strong>: AI stops reasoning about the actual
+problem and starts reasoning about its own symbol system.</p>
+<p>The fix was not better constraints. It was removing almost
+everything.</p>
+<p>This article documents 391 sessions of long-horizon AI-assisted
+software development, two rounds of simplification with opposite
+results, and the architectural pattern that substantially reduced
+failures and eliminated Index Sickness: separate current state from
+process history, physically, so historical noise cannot enter context in
+the first place. The mechanism requires no middleware, no model upgrade,
+and no graph architecture—just two files with different write modes.</p>
+<p><strong>Keywords</strong>: human-AI collaboration, LLM context
+management, semantic space control, software engineering, action
+research</p>
+<hr />
+<h2 id="i.-the-problem-we-created">I. The Problem We Created</h2>
+<h3 id="how-we-broke-our-ai-collaborationtwice">How We Broke Our AI
+Collaboration—Twice</h3>
+<p>We were building Bang-v3: a WeChat mini-program and H5 forwarding
+platform, refactoring ~506 files across roughly one month. One Owner
+(the human practitioner directing all AI collaboration), two AI roles (a
+Chief-of-Staff and a Developer), 391 sessions. The Owner handled all
+business and engineering discussion; no code or specification was
+written by hand. Each session began with the AI reading
+<code>context.md</code> to reconstruct its own working context—where the
+project came from, where it now stands, and where it is going; at
+session end, the AI updated <code>context.md</code> accordingly. No
+re-briefing was required.</p>
+<p>By the midpoint, things had gone badly wrong in a way we did not
+expect. AI was not forgetting—it was <em>too faithful</em> to its own
+symbolic record. Every time something broke, we added a rule. Every time
+a task got complicated, we gave it a symbol code. The AI’s system
+Instructions grew to <strong>308 lines</strong> of defensive patches.
+And the AI got worse.</p>
+<p>At Session 215, the AI Chief-of-Staff fully recited a completed
+“Pending-Flow v2 Legislation Proposal.” The logic was internally
+consistent at the symbolic level. When the Owner ran <code>grep</code>
+on the physical files, none of it existed. AI had built a complete
+“completed state” in its symbol layer while being entirely disconnected
+from reality. We called this <strong>Index Sickness</strong>: AI stops
+reasoning about the actual problem and reasons about its own symbol
+system instead.</p>
+<p>This is not a rare edge case. It is, we argue, the predictable
+endpoint of the prevailing engineering response to LLM unreliability:
+add more structure, add more symbols, add more rules. Our record shows
+this trajectory eventually produces its opposite.</p>
+<p><strong>Project records are open-sourced at
+https://github.com/huidev2025/CSF.</strong></p>
+<h3 id="a-note-on-this-paper">1.1 A Note on This Paper</h3>
+<p>All prose in this paper was produced by the AI collaborator (GitHub
+Copilot, primary model: Claude Sonnet 4.6, supplemented by Claude Opus
+4.7) under the Owner’s direction; the Owner did not independently write
+any paragraph. This is disclosed as a methodological transparency
+requirement. All empirical data—session sequence numbers, file change
+records, and the systematic analysis of 1,242 Owner inputs—are grounded
+in verifiable session records, not AI-generated claims. Full records are
+open-sourced. In this sense, the paper itself is an instance of the
+mechanism it describes: a long-horizon collaborative artifact produced
+under Purpose-First context management—direct evidence that
+purpose-activated AI maintains the semantic vitality required for
+sustained complex work.</p>
+<hr />
+<h2 id="ii.-what-went-wrongand-why">II. What Went Wrong—and Why</h2>
+<h3 id="the-failure">2.1 The Failure</h3>
+<p>The failures took two forms. The first was spatial: inside a single
+session, the symbol system created cognitive loops. Each identifier
+required a look-up-and-map step; once an identifier’s mapping was
+incorrectly resolved, all subsequent reasoning “corrected” itself within
+the symbolic system, forming a closed loop detached from business
+reality. The Owner could no longer check AI’s output by intuition—errors
+surfaced only at physical execution, often after significant downstream
+work.</p>
+<p>The second was temporal: across sessions, deprecated decisions did
+not fade. When the Owner explicitly declared a scheme deprecated, the
+Transformer self-attention mechanism had no way to honor that
+declaration. Historical symbolic patterns maintained weight in
+subsequent sessions and quietly infiltrated new design documents.
+Engineering log D-108 records the canonical case: AI used residual
+impressions to complete field label TD-01 as “024 Reverse Challenge
+Plugin.” TD-01 was the H5 Shared Component Library. The error spread to
+13 cross-file labels; the entire session was reclassified as a
+“meta-incident repair session.”</p>
+<p>These failures have quantitative backing from independent sources.
+Chroma’s systematic tests across 18 LLMs found that distractors in
+context cause non-monotonic performance degradation even under ideal
+retrieval recall [1]. Raju et al. found that agent task success rates
+drop sharply after forced context extension even when all relevant
+content is present [2]. The problem is not retrieval—it is what is
+already in the window.</p>
+<p>We label the underlying dynamic <strong>Index Sickness</strong>: when
+symbolic systems reach sufficient density, AI’s attentional resources
+concentrate in the symbolic layer and real business semantics are
+structurally marginalized. The canonical manifestation—AI generating
+outputs that are internally consistent but physically disconnected—we
+call <strong>Phantom Legislation</strong>. This is distinct from
+ordinary hallucination: hallucination produces content that is
+internally inconsistent or factually ungrounded; Index Sickness produces
+outputs that are internally consistent within the symbolic layer but
+disconnected from physical reality—the AI is reasoning correctly about
+the wrong thing.</p>
+<h3 id="why-intuition-fails-here">2.2 Why Intuition Fails Here</h3>
+<p>The dominant engineering response to LLM unreliability—add more
+formal constraints, refine symbols further, accumulate rules—is not
+irrational in the short term. For single-session, narrowly scoped tasks,
+it often works. The failure mode only emerges at scale and over time,
+which means the feedback loop reinforces the wrong lesson: “this rule
+fixed the problem in Session 50” does not warn about what that rule is
+doing to Sessions 150, 215, and 300.</p>
+<p>Recent work on structured memory architectures [3][4][5] and prompt
+formalization [6][7] addresses the same challenge this project
+faced—context degradation in long-horizon LLM collaboration. These are
+real tools for a real problem. However, what our record adds is a
+counterexample: in our project, moving in that direction produced Index
+Sickness. Whether that result generalizes is an open question; the
+counterexample is offered for examination, not as a refutation.</p>
+<hr />
+<h2 id="iii.-what-we-learned">III. What We Learned</h2>
+<h3 id="three-observations-that-guided-the-redesign">3.1 Three
+Observations That Guided the Redesign</h3>
+<p>After Index Sickness, we stopped adding rules and started asking why
+natural language had been working better in the sessions where things
+went well. Three things became clear:</p>
+<p><strong>1. Symbols cost attention.</strong> Natural language
+activates the model directly through trained priors. Symbols require
+look-ups. When a note says “this module handles the forwarding chain,”
+AI accesses meaning immediately. When a note says “SEC-2.0 governs
+D-139,” AI must first resolve the identifiers—consuming attention that
+should go to the actual problem. At some threshold, look-up load crowds
+out comprehension.</p>
+<p><strong>2. Determinism eliminates the reason for using AI.</strong>
+LLMs are useful because they can reason flexibly across ambiguous
+inputs. Formal constraints require AI to allocate attention between
+format compliance and semantic accuracy. More precise constraints
+produce more format-correct, less semantically accurate outputs. At the
+extreme, this is Phantom Legislation.</p>
+<p><strong>3. “Deprecated” does not mean gone.</strong> The Transformer
+attention mechanism allocates weights by statistical co-occurrence. A
+symbol that appeared 50 times does not lose weight because it was
+declared obsolete in a human note. Expanding the context window does not
+solve this—it may worsen it by accommodating more historical
+discussion.</p>
+<p>These are not new theoretical claims. They follow from what LLMs
+actually are. What was missing was a practical mechanism that operated
+on these observations instead of against them.</p>
+<p><strong>Naming note</strong>: we call this cluster of observations
+the <strong>Pang Principle</strong>—from the Chinese colloquial image of
+a self-evident truth thudding into place.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The
+name signals intent: this is not a discovery, it is a reminder of
+something that was always true and was being systematically ignored in
+our project and in the engineering path we were following.</p>
+<hr />
+<h2 id="iv.-the-fix-baseline-log-physical-separation">IV. The Fix:
+Baseline-Log Physical Separation</h2>
+<h3 id="the-core-idea">4.1 The Core Idea</h3>
+<p>Do not try to fight historical noise inside the context
+window—prevent it from entering in the first place.</p>
+<p>This mechanism requires no middleware code, no model upgrade, and no
+graph architecture. It restructures how project documentation is
+physically organized into two files with two different write modes:</p>
+<p><strong>Baseline (<code>context.md</code>) — Overwrite mode.</strong>
+Stores only the current task triple: Purpose, Method, and Resources.
+After each task, the baseline is rewritten with the new state. No
+history is retained. The session always starts from a clean statement of
+“what we are doing now and why.”</p>
+<p><strong>Session Log (<code>session-NNN.md</code>) — Append
+mode.</strong> Records each session’s process: how decisions formed,
+what alternatives were considered and eliminated, why, and what
+corrections were made. Natural-language writing only—not excluding
+filenames and symbolic references, but requiring natural-language
+explanation alongside every entry. Subsequent readers can then
+reconstruct context through reading comprehension rather than mechanical
+retrieval.</p>
+<p>The baseline crosses into new sessions; session logs do not.
+Deprecated content cannot affect new tasks because it is physically
+absent.</p>
+<h3 id="why-purpose-first">4.2 Why “Purpose First”</h3>
+<p>Baseline-Log Separation is the architectural implementation of a more
+fundamental insight: purpose is the minimal input that maximally
+preserves AI’s semantic vitality.</p>
+<p>The baseline stores Purpose before Method before Resources—not as a
+stylistic choice, but because purpose is the lightest possible input
+that constrains AI’s interpretive space. Format constraints operate at
+the token layer. Symbolic identifiers require look-ups. Purpose operates
+at the semantic layer, directly aligning AI’s probabilistic activation
+toward the current task boundary.</p>
+<p>When AI first reads “why we are doing this,” it draws on its own
+knowledge to select appropriate methods and identify just-sufficient
+resources—without a retrieval intermediary, because knowing the purpose,
+AI naturally knows what to look for.</p>
+<h3 id="results">4.3 Results</h3>
+<p>After implementing Baseline-Log Separation around Session
+215–252:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Instructions</td>
+<td>308 lines (defensive patches)</td>
+<td>~80 lines (↓75%)</td>
+</tr>
+<tr>
+<td><code>context.md</code></td>
+<td>680 lines</td>
+<td>189 lines (↓72%)</td>
+</tr>
+<tr>
+<td>DEVNOTES decision entries</td>
+<td>141+ entries</td>
+<td>5 entries (↓96%)</td>
+</tr>
+<tr>
+<td>Owner correction density</td>
+<td>0.79/session (#136–#214)</td>
+<td>0.53/session (#253–#395, ↓33%)</td>
+</tr>
+<tr>
+<td>Index Sickness cases</td>
+<td>9 confirmed</td>
+<td>0 cases across ~150 sessions</td>
+</tr>
+</tbody>
+</table>
+<p>The correction density figures come from systematic analysis of 139
+session record files covering Sessions #136–#395: 1,242 Owner inputs
+extracted, classified by keyword matching plus manual review, with Index
+Sickness cases individually verified against the operational definition.
+Classification keywords, manual review criteria, and raw data are
+documented and open-sourced (see
+<code>cases/paper1/dlog/data-analysis/owner_verbatim_stats_v3.md</code>
+in the repository). Formal statistical testing is not reported here:
+this is a practitioner-oriented action research report, and the
+underlying data are open-sourced precisely so that researchers who
+require statistical inference can apply their own methods.</p>
+<blockquote>
+<p><strong>Note</strong>: Per-session token consumption was not
+systematically recorded. No Index Sickness cases were observed: across
+the subsequent ~150 sessions, the Owner never encountered “AI claimed
+completion but physical file verification found it disconnected,” and no
+meta-incident repair sessions occurred. Interaction patterns simplified
+to “start, confirm, end.”</p>
+</blockquote>
+<h3 id="the-critical-comparison-two-rounds-of-simplification">4.4 The
+Critical Comparison: Two Rounds of Simplification</h3>
+<p>The results above would be consistent with a simpler explanation: we
+just got better at the project over time. We have a specific
+counter-argument.</p>
+<p>Before Baseline-Log Separation, we tried a different simplification
+round (“SP-Trim,” Sessions ~136–141): quantitative reduction, cutting
+specification lines by ~56%. The results:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>SP-Trim (~Sessions 136–141)</th>
+<th>Baseline-Log Separation (~Sessions 215–252)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core strategy</td>
+<td>Delete rules, merge files</td>
+<td>Separate baseline from log</td>
+</tr>
+<tr>
+<td>Specification change</td>
+<td>~1,100 → 480 lines (↓56%)</td>
+<td>Instructions 308 → 80 lines (↓75%)</td>
+</tr>
+<tr>
+<td><code>context.md</code></td>
+<td>2,197 → <strong>2,256 lines (+2.7%, grew)</strong></td>
+<td>680 → <strong>189 lines (↓72%)</strong></td>
+</tr>
+<tr>
+<td>Index Sickness post-change</td>
+<td><strong>Still erupted</strong> (Session 215 Phantom
+Legislation)</td>
+<td><strong>0 cases</strong> across ~150 sessions</td>
+</tr>
+</tbody>
+</table>
+<p>At SP-Trim, we had already accumulated ~140 sessions of experience.
+If improvement came from learning, it should have appeared then. The
+counter-evidence is not that SP-Trim’s six-session window was clean—it
+is that Index Sickness erupted in concentrated form in the ~60–80
+sessions that followed SP-Trim, despite that accumulated experience, and
+only stopped when the architecture changed.</p>
+<p>The effective variable was not how many lines of specification we
+had—it was whether current-state information and historical-process
+information were physically separated. SP-Trim reduced volume but kept
+both types mixed in the same files. Baseline-Log Separation split
+them.</p>
+<hr />
+<h2 id="v.-what-this-means-for-your-project">V. What This Means for Your
+Project</h2>
+<h3 id="try-this">5.1 Try This</h3>
+<p>The mechanism is simple enough to implement this week:</p>
+<ol type="1">
+<li><strong>Create two files</strong>: <code>context.md</code>
+(overwrite mode) and <code>session-log.md</code> (append mode). Keep
+them physically separate.</li>
+<li><strong>Baseline format</strong>: Write Purpose first, then Method,
+then Resources. Rewrite the entire baseline after each significant
+task—do not annotate or patch the previous version.</li>
+<li><strong>Log format</strong>: Record decisions in natural language.
+When you eliminate an option, write one sentence explaining why.
+Future-you and future-AI both need to know.</li>
+<li><strong>Context loading rule</strong>: Start new AI sessions by
+loading only the baseline. Load session logs only when explicitly
+tracing a past decision.</li>
+</ol>
+<p>This is the entire mechanism. No middleware, no vector store, no
+framework.</p>
+<h3 id="what-to-watch-for">5.2 What to Watch For</h3>
+<p>Index Sickness symptoms: AI reciting completed work that does not
+match physical files; corrections that require you to “explain the
+project again from the top”; session titles shifting toward “failure
+investigation” and “start over.” If you are seeing these, check whether
+your active context is accumulating historical discussion. The diagnosis
+is often simpler than the symptom looks.</p>
+<h3 id="scope-and-threats-to-validity">5.3 Scope and Threats to
+Validity</h3>
+<p>This record comes from a single project, one Owner, one AI platform
+(GitHub Copilot, Claude Sonnet 4.6). Action research methodology—where
+the researcher is simultaneously the practitioner—is recognized in
+software engineering [8][9]; in contexts of deep LLM involvement, this
+framework may better capture cognitive phenomena in real interaction
+than controlled experiments [10].</p>
+<p><strong>Internal validity</strong>: The most plausible alternative
+explanation is a learning effect—the Owner became more skilled over
+time. The SP-Trim comparison (§4.4) directly addresses this: SP-Trim was
+attempted after ~140 sessions of accumulated experience and Index
+Sickness still erupted in concentrated form in the sessions that
+followed. Improvement came only when the architecture changed, not when
+experience accumulated. We cannot rule out concurrent changes in task
+complexity or model version; we have no record of such changes in that
+period.</p>
+<p><strong>External validity</strong>: Generalizability requires
+validation across more projects, collaborators, and LLM versions. We are
+not claiming the mechanism solves every long-horizon AI collaboration
+problem, or that the supply-side approaches it contrasts with are wrong
+in general. We are offering a counterexample and a mechanism, available
+for examination and attempted reproduction.</p>
+<p>Multi-project comparison is the most direct next step. We invite
+it.</p>
+<hr />
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This paper was produced under the Baseline-Log Physical Separation
+protocol described above. H. Zhang was responsible for purpose
+activation—stating direction, rendering judgment, and raising
+corrections; all prose was generated by the AI collaborator. AI
+involvement is declared in full, consistent with §1.1.</p>
+<hr />
+<h2 id="references">References</h2>
+<p>[1] Hong, K., Troynikov, A., &amp; Huber, J. (2025). “Context Rot:
+How Increasing Input Tokens Impacts LLM Performance.” Chroma Technical
+Report. https://trychroma.com/research/context-rot</p>
+<p>[2] Raju, R. et al. (2026). “The Limits of Long-Context Reasoning in
+Automated Bug Fixing.” <em>ICLR 2026 ICBINB Workshop</em>.
+arXiv:2602.16069.</p>
+<p>[3] Zhang, Y. et al. (2026). “CoMem: Context Management with A
+Decoupled Long-Context Model.” arXiv:2605.30842.</p>
+<p>[4] Lu, K. et al. (2026). “REAL: A Reasoning-Enhanced Graph Framework
+for Long-Term Memory Management of LLMs.” arXiv:2606.10694.</p>
+<p>[5] Wu, Z. et al. (2026). “GAM: Hierarchical Graph-based Agentic
+Memory for LLM Agents.” arXiv:2604.12285.</p>
+<p>[6] Chen, Z. et al. (2026). “Promptware Engineering: Software
+Engineering for Prompt-Enabled Systems.” <em>ACM TOSEM</em>.
+arXiv:2503.02400.</p>
+<p>[7] Wu, J. et al. (2025). “Git Context Controller: Manage the Context
+of LLM-based Agents like Git.” arXiv:2508.00031.</p>
+<p>[8] Staron, M. (2024). “Teaching Action Research.” <em>EMSE Edu
+Book</em>. arXiv:2408.02399.</p>
+<p>[9] Wohlin, C. et al. (2012). <em>Experimentation in Software
+Engineering</em>. Springer.</p>
+<p>[10] Treude, C. &amp; Storey, M. (2025). “Generative AI and Empirical
+Software Engineering: A Paradigm Shift.” <em>AIware 2025</em>.
+arXiv:2502.08108.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><em>乓的一声</em> (pāng de yī shēng): a Chinese
+colloquial onomatopoeia for something clicking unmistakably into
+place.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

@@ -42,7 +42,7 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 想看 CSF 在真实项目里是什么样子的 / Want to see CSF in action：
 
 7. **[cases/bang-v3/ — 实战案例：375 次会话节选](cases/bang-v3/README.md)** —— 三段原始对话日志，展示 AI 拒绝错误决策、自主安排复杂计划、用语义日志快速定位根因的四个具体证据
-8. **[cases/paper1/ — 实战案例：论文写作全过程](cases/paper1/README.md)** —— 12 轮会话记录 + 目标驱动 + 论文编写、修改与投稿，使用 csf-minimal
+8. **[cases/paper1/ — 实战案例：论文写作全过程](cases/paper1/README.md)** —— 17 轮会话记录 + 目标驱动 + 论文编写、修改、投稿（arXiv + IEEE Software），使用 csf-minimal
 
 > **第一次来？** 直接看 **[QUICKSTART.md](QUICKSTART.md)** 就够了。
 > **First time here?** Read **[QUICKSTART.md](QUICKSTART.md)** first.
