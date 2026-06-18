@@ -51,7 +51,7 @@ layout: default
 | dlog_15 | 模拟严苛审稿人反馈 + Owner 逐条回应 |
 | dlog_16 | arXiv update 上传（v1.6 定稿） |
 | dlog_paper1_issues | 问题追踪日志（14 个 issue 的判定与处理） |
-| 数据分析/ | 分析脚本（Python）、统计结果、论文增强建议 |
+| [data-analysis/](dlog/data-analysis/) | 分析脚本（Python）、统计结果、论文增强建议 |
 | _notes_ | 投稿目标笔记（IEEE Software / ICSE 等） |
 
 ---

@@ -51,7 +51,7 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 | dlog_15 | Simulated harsh reviewer feedback + Owner's point-by-point response |
 | dlog_16 | arXiv update upload (v1.6 finalized) |
 | dlog_paper1_issues | Issue tracking log (14 issues with disposition) |
-| 数据分析/ | Analysis scripts (Python), statistical results, paper enhancement recommendations |
+| [data-analysis/](dlog/data-analysis/) | Analysis scripts (Python), statistical results, paper enhancement recommendations |
 | _notes_ | Submission target notes (IEEE Software / ICSE, etc.) |
 
 ---

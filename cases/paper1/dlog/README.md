@@ -40,5 +40,5 @@
 | `_dlog_15_来自苛刻、世故、油条的审稿人的意见.md` | 模拟严苛审稿人反馈 + Owner 回应 |
 | `_dlog_16_结束.md` | arXiv update 上传（v1.6 定稿） |
 | `_dlog_paper1_issues.md` | 问题追踪日志 |
-| `数据分析/` | 分析脚本、统计结果、增强建议 |
+| `data-analysis/` | 分析脚本、统计结果、增强建议 |
 | `_notes_.md` | 投稿目标笔记（IEEE Software / ICSE 等） |
