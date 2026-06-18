@@ -130,7 +130,7 @@ csf在github上的发布和维护
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
 - **GitHub Pages**：A 方案（默认 Jekyll，Deploy from `main`），`https://huidev2025.github.io/CSF/`。中文文件名一般可访问，遇到 404 再处理。
-- **未同步到 GitHub 的事项**：本轮所有变更待推送（ieee-software/ 新增 + dlog_17 + Closing Remarks 截图 + _notes_ 更新 + closing-remarks 中英文展示页 + 全部 README 更新 + context.md）。`dlog_004/005/006` 均顺延。
+- **未同步到 GitHub 的事项**：无。本轮已推送（commit `fd6b27b`）。`dlog_004/005/006` 均顺延。
 
 ---
 
