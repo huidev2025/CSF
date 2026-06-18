@@ -7,7 +7,7 @@ layout: default
 
 **简体中文** &#124; [English](README_en.md)
 
-> 这是一次使用 CSF minimal 版本（`context.md` 模板）完成的学术论文写作。12 轮对话日志 + 中英文投稿稿 + 协作记忆文件，展示了从"讨论骨架"到"arXiv 投稿"的完整过程。
+> 这是一次使用 CSF minimal 版本（`context.md` 模板）完成的学术论文写作。16 轮对话日志 + 中英文投稿稿 + 协作记忆文件，展示了从"讨论骨架"到"arXiv 投稿"再到"数据分析与修订"的完整过程。
 
 ---
 
@@ -25,12 +25,12 @@ layout: default
 |---|---|
 | [context.md](context.md) | 写论文时使用的协作记忆文件（csf-minimal 模板实例） |
 | [arxiv_submission_zh.md](arxiv_submission_zh.md) | 中文 arXiv 投稿稿（主稿，已定稿） |
-| [arxiv_submission_en.md](arxiv_submission_en.md) | 英文 arXiv 投稿稿（待同步中文最新改动） |
-| [dlog/](dlog/) | 12 轮原始会话记录 + 问题追踪日志 |
+| [arxiv_submission_en.md](arxiv_submission_en.md) | 英文 arXiv 投稿稿（v1.6，与中文稿同步） |
+| [dlog/](dlog/) | 16 轮原始会话记录 + 数据分析脚本 + 投稿笔记 |
 
 ---
 
-## 12 轮会话做了什么
+## 16 轮会话做了什么
 
 | 文件 | 核心事件 |
 |---|---|
@@ -46,7 +46,13 @@ layout: default
 | dlog_10 | 全局审查 + 模拟审稿人角色扮演（DeepSeek） |
 | dlog_11 | 再次中文修改 |
 | dlog_12 | 英文版定稿 + 上传 arXiv |
+| dlog_13 | 系统性数据挖掘——纠偏密度、上下文增长率、两轮简化对比 |
+| dlog_14 | 将数据分析发现纳入论文正文（v1.5 → v1.6） |
+| dlog_15 | 模拟严苛审稿人反馈 + Owner 逐条回应 |
+| dlog_16 | arXiv update 上传（v1.6 定稿） |
 | dlog_paper1_issues | 问题追踪日志（14 个 issue 的判定与处理） |
+| 数据分析/ | 分析脚本（Python）、统计结果、论文增强建议 |
+| _notes_ | 投稿目标笔记（IEEE Software / ICSE 等） |
 
 ---
 
@@ -54,7 +60,7 @@ layout: default
 
 论文写作使用了 [csf-minimal](../../csf-minimal/) 的基础模式：
 
-- **`context.md` 作为协作记忆**：每次会话开始时读取，结束时更新。12 轮对话中，AI 不需要 Owner 重复交代背景。
+- **`context.md` 作为协作记忆**：每次会话开始时读取，结束时更新。16 轮对话中，AI 不需要 Owner 重复交代背景。
 - **每轮一个目的**：收集素材就纯收集，改结构就纯改结构，不混。
 - **会话日志独立保存**：dlog/ 中的文件是每次会话的完整记录，与正文分离。
 

@@ -63,7 +63,7 @@ csf在github上的发布和维护
 - [x] **可视化导图上线**：`visuals/` 目录，4 个 HTML（中英各 2 张）：AI 编程演进版图 + CSF 三流派对位图谱；README 加「可视化导图」双语表格入口；commit `3cabbf7`
 - [x] **二维码更新**：`assets/zsxq-qrcode-2.png` 替换两个中文 HTML 里的过期 CDN 链接；commit `a99c536`
 - [x] **实战案例上线**：`cases/bang-v3/` 目录（session 373–375 原始日志节选 + README），README 中英文双入口（「从哪开始读」第 7 条 + 英文 `See it in action` 章节）；commit `f02d6f3`
-- [x] **论文写作案例上线**：`cases/paper1/` 目录（arXiv 中英文投稿稿 + 12 轮 dlog 原始会话记录 + 中英文 README），README 中英文双入口（「从哪开始读」第 8 条 + 英文 `See it in action` 第 8 条）；commit 待推送
+- [x] **论文写作案例上线**：`cases/paper1/` 目录（arXiv 中英文投稿稿 v1.6 + 16 轮 dlog 原始会话记录 + 数据分析脚本 + 中英文 README），README 中英文双入口（「从哪开始读」第 8 条 + 英文 `See it in action` 第 8 条）；commit 待推送
 - [ ] GitHub SEO 路径 ④：外部信号（知识星球开张 / Hacker News / 中文社区 / awesome-* PR）——Owner 将另开专题
 - [ ] GitHub SEO 路径 ⑤：首篇专栏文章（题目未定，路径④完成后接上）
 - [ ] 中文引言文件名是否保留原名（未决）
@@ -78,13 +78,13 @@ csf在github上的发布和维护
 
 ## §C 上次对话
 
-- **日期**：2026-06-17（第十轮对话，主题：论文写作案例上线 + 论文审查讨论收尾）
+- **日期**：2026-06-18（第十一轮对话，主题：论文案例更新——补充 dlog_13~16 + 更新论文稿至 v1.6）
 - **做了什么**：
-  1. **论文写作案例发布**：创建 `cases/paper1/`，含 arXiv 中英文投稿稿、12 轮 dlog 原始会话记录、中英文 README。dlog 原样搬入（保留工具调用痕迹），可核查。
-  2. **README 入口更新**：中英文 README 各新增第 8 条。
-  3. 论文审查讨论（详見 `_dlog_10`）：14 条逐条回应，7 认可、6 驳回、1 Owner 裁量。修改待执行。
-- **关键判断**：dlog 不清理就发——清理错了比不清理更糟。原始日志价值在可核查而非可阅读。
-- **未推送**：本轮所有变更待推送（新增 cases/paper1/ + README 更新 + context.md）
+  1. **dlog 补全**：从源目录同步 4 个新增 dlog（dlog_13 数据分析、dlog_14 数据结论改入论文、dlog_15 审稿人模拟、dlog_16 arXiv update 上传） + `_notes_.md`（投稿目标笔记）至 `cases/paper1/dlog/`。
+  2. **索引更新**：中英文 README 全部从「12 轮」更新为「16 轮」，新增 dlog_13~16 及数据分析/、_notes_ 条目。dlog/README.md 同步更新。
+  3. **论文稿确认**：`arxiv_submission_zh.md` 与 `arxiv_submission_en.md` 已是 v1.6 最新版（含两轮简化对比、纠偏密度统计等数据分析结论），两边一致，无需替换。
+- **关键判断**：论文稿已是最新，只需补 dlog 和更新索引。
+- **未推送**：本轮所有变更待推送（dlog 新增 + README 更新 + context.md）
 
 ---
 
@@ -92,7 +92,7 @@ csf在github上的发布和维护
 
 - **目的**：Owner 专题处理「外部信号」（SEO 路径 ④）后，连接路径 ⑤（首篇专栏文章在外界分发）落地。
 
-- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
+- **当前阶段定位**：仓库可控的事情**全部超级到位**——v1.0.0 已发布，旗舰连载《与智能共事》中英双语正式上线，元数据层 SEO（路径 ①②③）就绪，Pages + 可视化导图全量就绪，cases/paper1 已更新至 16 轮 dlog + v1.6 论文稿。剩下的全是「对外推广节奏」——Owner 主导，AI 配合。
 
 - **后续工作项**：
 
@@ -111,7 +111,7 @@ csf在github上的发布和维护
   13. **csf-lite 导读页**（上轮遗留，可选）。
   14. **中文文件名 URL 编码**：遇到 404 再处理，不挂就不动。
 
-- **下轮开场建议**：先问 Owner 路径 ④ 外部信号进展（知识星球 / HN / V2EX 等），再据此决定路径 ⑤ 题目和切入角度。cases/ 已上线，可作为路径 ④ 投稿时的佐证材料（"here's the raw proof"）。
+- **下轮开场建议**：先问 Owner 路径 ④ 外部信号进展（知识星球 / HN / V2EX 等），再据此决定路径 ⑤ 题目和切入角度。cases/ 已上线且更新至最新，可作为路径 ④ 投稿时的佐证材料（"here's the raw proof"）。
 
 - **需要的资料**：现有仓库内容 + 「备忘·理论参考资料」。
 
@@ -125,7 +125,7 @@ csf在github上的发布和维护
 - **License**：CC BY-NC 4.0；个人/学术/非营利免费，创业者免费但希望告知，企业商用需联系 Owner。
 - **发布节奏**：有进展 → commit → push；对外文案类修改需 Owner 确认后再推。
 - **GitHub Pages**：A 方案（默认 Jekyll，Deploy from `main`），`https://huidev2025.github.io/CSF/`。中文文件名一般可访问，遇到 404 再处理。
-- **未同步到 GitHub 的事项**：本轮 context.md 更新待推（收尾后推）。`dlog_004/005/006` 均顺延。
+- **未同步到 GitHub 的事项**：本轮 context.md 更新 + cases/paper1/ 更新（dlog 13~16 + README）待推送（收尾后一起推）。`dlog_004/005/006` 均顺延。
 
 ---
 

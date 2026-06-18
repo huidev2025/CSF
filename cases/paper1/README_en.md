@@ -7,7 +7,7 @@ layout: default
 
 [简体中文](README.md) &#124; **English**
 
-> An academic paper written using the CSF minimal version (`context.md` template). 12 dialogue logs + bilingual submissions + collaboration memory file, documenting the full process from "discussing the skeleton" to "arXiv submission."
+> An academic paper written using the CSF minimal version (`context.md` template). 16 dialogue logs + bilingual submissions + collaboration memory file, documenting the full process from "discussing the skeleton" to "arXiv submission" to "data analysis and revision."
 
 ---
 
@@ -25,12 +25,12 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 |---|---|
 | [context.md](context.md) | Collaboration memory file used during writing (csf-minimal template instance) |
 | [arxiv_submission_zh.md](arxiv_submission_zh.md) | Chinese arXiv submission (primary, finalized) |
-| [arxiv_submission_en.md](arxiv_submission_en.md) | English arXiv submission (pending sync with latest Chinese revisions) |
-| [dlog/](dlog/) | 12 raw dialogue logs + issue tracking log |
+| [arxiv_submission_en.md](arxiv_submission_en.md) | English arXiv submission (v1.6, synced with Chinese) |
+| [dlog/](dlog/) | 16 raw dialogue logs + analysis scripts + submission notes |
 
 ---
 
-## What the 12 Sessions Covered
+## What the 16 Sessions Covered
 
 | File | Core Event |
 |---|---|
@@ -46,7 +46,13 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 | dlog_10 | Global review + simulated harsh reviewer role-play (DeepSeek) |
 | dlog_11 | Further Chinese revisions |
 | dlog_12 | English finalization + arXiv upload |
+| dlog_13 | Systematic data mining — correction density, context growth rate, two-round simplification comparison |
+| dlog_14 | Incorporating data findings into the paper (v1.5 → v1.6) |
+| dlog_15 | Simulated harsh reviewer feedback + Owner's point-by-point response |
+| dlog_16 | arXiv update upload (v1.6 finalized) |
 | dlog_paper1_issues | Issue tracking log (14 issues with disposition) |
+| 数据分析/ | Analysis scripts (Python), statistical results, paper enhancement recommendations |
+| _notes_ | Submission target notes (IEEE Software / ICSE, etc.) |
 
 ---
 
@@ -54,7 +60,7 @@ The writing process is a **demonstration** of the paper's thesis: all text was g
 
 The paper was written using the basic pattern from [csf-minimal](../../csf-minimal/):
 
-- **`context.md` as collaboration memory**: read at session start, updated at session end. Across 12 sessions, the AI never needed the Owner to re-explain background.
+- **`context.md` as collaboration memory**: read at session start, updated at session end. Across 16 sessions, the AI never needed the Owner to re-explain background.
 - **One purpose per session**: collect materials, or revise structure, or polish language — focused, not mixed.
 - **Dialogue logs kept separately**: the files in dlog/ are complete records of each session, separate from the manuscript.
 
