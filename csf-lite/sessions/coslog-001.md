@@ -76,3 +76,4 @@ Owner 给出明确任务：
 | 2026-06-26 | `csf-lite-doc/Clarity-使用手册.md` | 新建 | 从 bootstrap 拷贝 |
 | 2026-06-26 | `csf-lite-doc/csf发行.jpg` | 新建 | 配图 |
 | 2026-06-26 | `RELEASE.md` | 新建 | 自举包说明 + 三步开始 + 版本历史 |
+| 2026-06-26 | (全部文件) | commit + push | `dc77336` — csf-lite v1.0 正式开源发布 |

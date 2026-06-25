@@ -8,6 +8,8 @@ layout: default
 [简体中文](README.md) &#124; **English**
 
 > A human-AI collaboration framework that works **with** LLM nature, not around it. Built on natural language and purpose — making RAG, agent orchestration, and elaborate prompt engineering **unnecessary, not unavailable**. Home of the Pang Principle.
+>
+> **No coding. No expertise. Build professional software in 20 minutes.**
 
 📖 **Read on the web**：<https://huidev2025.github.io/CSF/>
 
@@ -28,25 +30,26 @@ See our Manifesto: [Manifesto: You Are Fighting the Wrong War](Manifesto-v3-You-
 In order, takes 5 minutes to start:
 
 1. **[Manifesto](Manifesto-v3-You-Are-Fighting-the-Wrong-War.md)** — Why CSF exists, the Pang Principle.
-2. **[QUICKSTART.md](QUICKSTART.md)** — Quickstart Guide (Bilingual): You don't need to write code, just express your purpose clearly.
-3. **[csf-minimal/README.md](csf-minimal/README.md)** — CSF minimal teaser version, a 30-second summary + three core disparities.
-4. **[csf-minimal/context.md](csf-minimal/context.md)** — A blank template you can copy and use directly.
-5. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** — A/B sandbox design to experience the disparity firsthand.
+2. **[📖 Installation & Setup (Illustrated)](安装与配置.html)** — No coding, 20 minutes to full setup. Start here!
+3. **[QUICKSTART.md](QUICKSTART.md)** — Quickstart Guide (Bilingual): You don't need to write code, just express your purpose clearly.
+4. **[csf-minimal/README.md](csf-minimal/README.md)** — CSF minimal teaser version, a 30-second summary + three core disparities.
+5. **[csf-minimal/context.md](csf-minimal/context.md)** — A blank template you can copy and use directly.
+6. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** — A/B sandbox design to experience the disparity firsthand.
 
 Deeper Theory:
 
-6. **[essays/ — CSF Column Shelf](essays/README_en.md)** — "Working with Intelligence" flagship series, deeply analyzing the four engineering systems and collaborative philosophies.
+7. **[essays/ — CSF Column Shelf](essays/README_en.md)** — "Working with Intelligence" flagship series, deeply analyzing the four engineering systems and collaborative philosophies.
 
 See it in Action:
 
-7. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README_en.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
-8. **[cases/paper1/ — Paper Writing: Full Process](cases/paper1/README_en.md)** — 12 dialogue sessions + purpose-driven + paper drafting, revision & submission, using csf-minimal.
+8. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README_en.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
+9. **[cases/paper1/ — Paper Writing: Full Process](cases/paper1/README_en.md)** — 12 dialogue sessions + purpose-driven + paper drafting, revision & submission, using csf-minimal.
 
 Ready for real projects:
 
-9. **[csf-lite/README.md](csf-lite/README.md)** — Production-grade framework with full engine + triplets + protocol library + knowledge base. Copy to your project, tell the AI "Read cos-context", and start.
+10. **[csf-lite/README.md](csf-lite/README.md)** — Production-grade framework with full engine + triplets + protocol library + knowledge base. Copy to your project, tell the AI "Read cos-context", and start.
 
-> **First time here?** Start with **[QUICKSTART.md](QUICKSTART.md)**.
+> **First time here?** Start with the **[📖 Illustrated Setup Guide](安装与配置.html)** — 20 minutes, no coding.
 
 ---
 

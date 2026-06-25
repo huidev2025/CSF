@@ -10,6 +10,8 @@ layout: default
 
 > 一种在 LLM 本性之内、用「自然语言 + 目的」设计人机协同工作方式的工程方法。
 > A human-AI collaboration framework that works **with** LLM nature, not around it. Built on natural language and purpose — making RAG, agent orchestration, and elaborate prompt engineering **unnecessary, not unavailable**. Home of the Pang Principle.
+>
+> **不碰代码，也能写专业软件。不懂专业，也能做专业项目。**
 
 📖 **网页阅读 / Read on the web**：<https://huidev2025.github.io/CSF/>
 
@@ -30,25 +32,26 @@ CSF 选择另一条路：**承认这些约束为事实，在约束内设计**。
 按顺序，五分钟可以开始：
 
 1. **[引言](引言v3：你们在拿着前朝的尚方宝剑，斩当朝的官.md)** —— 为什么需要 CSF，乓定律
-2. **[QUICKSTART.md](QUICKSTART.md)** —— 上手指引（中英文）：你不需要会代码，只需要把目标说清楚
-3. **[csf-minimal/README.md](csf-minimal/README.md)** —— CSF 最小教学版，30 秒说明 + 三个核心差异
-4. **[csf-minimal/context.md](csf-minimal/context.md)** —— 你可以直接复制使用的协作记忆模板
-5. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** —— A/B 实验设计，亲自感受差异
+2. **[📖 安装与配置（图文版）](安装与配置.html)** —— 不碰代码，20 分钟完成全部设置。推荐从这里开始！
+3. **[QUICKSTART.md](QUICKSTART.md)** —— 上手指引（中英文）：你不需要会代码，只需要把目标说清楚
+4. **[csf-minimal/README.md](csf-minimal/README.md)** —— CSF 最小教学版，30 秒说明 + 三个核心差异
+5. **[csf-minimal/context.md](csf-minimal/context.md)** —— 你可以直接复制使用的协作记忆模板
+6. **[csf-minimal/体验对比指南.md](csf-minimal/体验对比指南.md)** —— A/B 实验设计，亲自感受差异
 
 想读思想原稿 / Deeper Theory:
 
-6. **[essays/ — CSF 旗舰专栏书架](essays/README.md)** —— 《与智能共事》中英双语旗舰连载，深度剖析四大工程系统及协作哲学
+7. **[essays/ — CSF 旗舰专栏书架](essays/README.md)** —— 《与智能共事》中英双语旗舰连载，深度剖析四大工程系统及协作哲学
 
 想看 CSF 在真实项目里是什么样子的 / Want to see CSF in action：
 
-7. **[cases/bang-v3/ — 实战案例：375 次会话节选](cases/bang-v3/README.md)** —— 三段原始对话日志，展示 AI 拒绝错误决策、自主安排复杂计划、用语义日志快速定位根因的四个具体证据
-8. **[cases/paper1/ — 实战案例：论文写作全过程](cases/paper1/README.md)** —— 17 轮会话记录 + 目标驱动 + 论文编写、修改、投稿（arXiv + IEEE Software），使用 csf-minimal
+8. **[cases/bang-v3/ — 实战案例：375 次会话节选](cases/bang-v3/README.md)** —— 三段原始对话日志，展示 AI 拒绝错误决策、自主安排复杂计划、用语义日志快速定位根因的四个具体证据
+9. **[cases/paper1/ — 实战案例：论文写作全过程](cases/paper1/README.md)** —— 17 轮会话记录 + 目标驱动 + 论文编写、修改、投稿（arXiv + IEEE Software），使用 csf-minimal
 
 想用 CSF 跑自己的项目 / Ready for real projects:
 
-9. **[csf-lite/README.md](csf-lite/README.md)** —— 实战级框架，完整引擎 + 三元组 + 协议库 + 经验库。拷贝到你的项目，告诉 AI「阅读 cos-context」，开始。
+10. **[csf-lite/README.md](csf-lite/README.md)** —— 实战级框架，完整引擎 + 三元组 + 协议库 + 经验库。拷贝到你的项目，告诉 AI「阅读 cos-context」，开始。
 
-> **第一次来？** 直接看 **[QUICKSTART.md](QUICKSTART.md)** 就够了。
+> **第一次来？** 直接看 **[📖 安装与配置（图文版）](安装与配置.html)** —— 不碰代码，20 分钟开始。
 > **First time here?** Read **[QUICKSTART.md](QUICKSTART.md)** first.
 
 ---

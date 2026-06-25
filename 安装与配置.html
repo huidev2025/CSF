@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+body { font-family: "Microsoft YaHei", "SimSun", sans-serif; font-size: 14px; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+h2 { font-size: 20px; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 30px; }
+h3 { font-size: 16px; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+th { background: #f5f5f5; }
+blockquote { border-left: 4px solid #2980B9; padding: 8px 16px; margin: 16px 0; background: #f0f7ff; color: #555; }
+code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+pre { background: #f8f8f8; padding: 12px 16px; border-radius: 4px; overflow-x: auto; }
+img { max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+@media print { body { margin: 0; padding: 0 40px; } }
+</style>
+</head>
+<body><h1>CSF Lite — 安装与配置</h1>
+<blockquote>
+<p>不碰代码，也能写专业软件。不懂专业，也能做专业项目。
+不需懂开发，20 分钟可完成全部设置。
+版本：v1.0 | 2026-06-26</p>
+</blockquote>
+<hr />
+<h2>版权与社区</h2>
+<p><strong>CSF（Collaboration Specification Framework）</strong> 是一套人机协作方法论——让 AI 理解你的目标，主动帮你规划、执行、检查。</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌐 GitHub 开源仓库</td>
+<td><a href="https://github.com/huidev2025/CSF">https://github.com/huidev2025/CSF</a></td>
+</tr>
+<tr>
+<td>📖 在线文档</td>
+<td><a href="https://huidev2025.github.io/CSF/">https://huidev2025.github.io/CSF/</a></td>
+</tr>
+<tr>
+<td>🪐 知识星球（问答、案例、更新）</td>
+<td>扫码加入 ↓</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="CSF 知识星球" src="csf-lite-doc/csf发行.jpg" /></p>
+<blockquote>
+<p>星球内提供：使用答疑、真实案例分享、版本更新通知、与其他用户的经验交流。</p>
+</blockquote>
+<hr />
+<h2>一、CSF Lite 是什么</h2>
+<p><strong>CSF Lite</strong> 是 CSF 体系的中档——适合个人或小团队，在真实项目中落地人机协作。</p>
+<p>你只需要：
+- 说出你的目标
+- 与 AI 保持对话
+- 听取建议、做决策</p>
+<p>AI（参谋长）会帮你：理解需求 → 设计方案 → 规划任务 → 跟踪进度。</p>
+<p><strong>Clarity</strong> 是配套的桌面工具（可选），辅助编辑 CSF 文件和管理提示词。</p>
+<hr />
+<h2>二、授权声明</h2>
+<p>CSF Lite 包含两个组件，各自独立授权：</p>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>许可证</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CSF Lite</strong>（方法论与文件体系）</td>
+<td>CC BY-NC 4.0</td>
+<td>署名-非商业性使用 4.0 国际</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong>（桌面工具）</td>
+<td>MIT</td>
+<td>可自由使用、修改、分发</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>CC BY-NC 4.0 的含义</strong>：你可以自由分享、修改 CSF Lite 文件，但必须署名原作者，且<strong>不得用于商业目的</strong>。完整条款见 <code>LICENSE</code> 文件。</p>
+</blockquote>
+<hr />
+<h2>三、准备工作</h2>
+<p>你需要三样东西：</p>
+<h3>3.1 获取 CSF Lite 文件包</h3>
+<p>从 GitHub  releases 页面下载最新 zip 包，解压到你的项目文件夹。</p>
+<blockquote>
+<p>不需要安装 Git，不需要克隆仓库——直接下载 zip 解压即可。</p>
+</blockquote>
+<h3>3.2 获取大模型 API</h3>
+<p>CSF Lite <strong>支持所有主流大模型</strong>，你可以根据自己的预算和偏好选择。</p>
+<table>
+<thead>
+<tr>
+<th>推荐模型</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DeepSeek V4 Pro</strong> ⭐ 推荐</td>
+<td>使用效果最佳，价格极其便宜</td>
+</tr>
+<tr>
+<td><strong>Claude Sonnet 4.6</strong></td>
+<td>使用效果佳，价格适中</td>
+</tr>
+</tbody>
+</table>
+<p>以下以 DeepSeek 为例说明获取 API Key 的步骤。其他模型的操作类似，访问对应平台即可。</p>
+<p><strong>操作步骤（DeepSeek）</strong>：</p>
+<ol>
+<li>打开浏览器，访问 <strong>DeepSeek 开放平台</strong>：<a href="https://platform.deepseek.com">https://platform.deepseek.com</a></li>
+<li>注册账号（手机号或邮箱）</li>
+<li>登录后进入「API Keys」页面</li>
+<li>点击「创建 API Key」，命名（如 <code>csf-lite</code>），复制保存</li>
+<li>进入「充值」页面，按用量充值（建议首次充 10~20 元试用）</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>API Key 只显示一次，请立即保存到安全的地方。</strong></p>
+<p>费用参考：以上两个模型日常使用每月几元到几十元不等。</p>
+</blockquote>
+<h3>3.3 下载安装 VS Code（推荐）</h3>
+<p>VS Code 是微软出品的免费代码编辑器。<strong>CSF Lite 推荐使用 VS Code，但不是必须</strong>——任何支持 Copilot Chat 的编辑器都可以。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>打开浏览器，访问 VS Code 官网：<a href="https://code.visualstudio.com">https://code.visualstudio.com</a></li>
+<li>点击「Download for Windows」（Mac 用户选择对应版本）</li>
+<li>运行下载的安装程序，一路「下一步」完成安装</li>
+<li>启动 VS Code</li>
+</ol>
+<hr />
+<h2>四、连接大模型</h2>
+<p>VS Code 的 Copilot Chat 是内置的，但默认使用 GitHub 的模型。要让 Copilot 使用你自己的 API，需要安装一个模型连接插件。</p>
+<h3>4.1 安装插件</h3>
+<ol>
+<li>打开 VS Code</li>
+<li>点击左侧竖栏的「扩展」图标（或按 <code>Ctrl+Shift+X</code>）</li>
+<li>搜索 <strong>DeepSeek V4 for Copilot Chat</strong>（如用 Claude 等其他模型，搜索对应插件）</li>
+<li>点击「安装」</li>
+</ol>
+<h3>4.2 配置 API Key</h3>
+<p>安装完成后，在插件设置中填入你在 3.2 节获取的 API Key。</p>
+<blockquote>
+<p>💡 一句话：Copilot Chat 已内置，只需装一个模型插件 + 填 Key，就可以用你自己的模型了。</p>
+</blockquote>
+<hr />
+<h2>五、开始使用 CSF Lite</h2>
+<h3>5.1 打开项目</h3>
+<ol>
+<li>启动 VS Code</li>
+<li>点击「File → Open Folder」，选择你解压的 CSF Lite 项目文件夹</li>
+<li>点击左侧竖栏的「Copilot Chat」图标，打开 AI 对话窗口</li>
+</ol>
+<h3>5.2 开局</h3>
+<p>在 Copilot 聊天窗口中输入：</p>
+<pre><code>阅读 cos-context.md，开局
+</code></pre>
+<p>AI 会加载 CSF Lite 引擎，向你说一句「L1 brief」——介绍自己是谁、项目在什么状态、接下来建议做什么。</p>
+<h3>5.3 说出你的目的</h3>
+<p>开局后，直接告诉 AI 你想做什么。例如：</p>
+<ul>
+<li>「我想开发一个个人博客网站」</li>
+<li>「我想开发一个微信小程序 / 桌面应用 / Web 应用 / 手机 App」</li>
+<li>「我要做一个复杂系统的需求分析和架构设计」</li>
+<li>「帮我做一个项目报价书」</li>
+<li>「帮我写一个招标书 / 投标书」</li>
+<li>「我要整理一份市场调研报告」</li>
+<li>「帮我规划一个学习路线」</li>
+</ul>
+<p>AI（参谋长）会理解你的目标，与你讨论方案、拆解任务、逐步推进。</p>
+<h3>5.4 保持沟通</h3>
+<ul>
+<li><strong>你说目的，AI 出方案</strong> —— 你不需要自己拆解任务</li>
+<li><strong>AI 会主动提问</strong> —— 不清楚的地方会问你</li>
+<li><strong>你只需要做决策</strong> —— 同意就继续，不同意就纠偏</li>
+<li><strong>每次结束时说「88」或「收尾」</strong> —— AI 会自动保存进度，下次接上</li>
+</ul>
+<blockquote>
+<p>💡 <strong>核心要领</strong>：把 AI 当作平等的合作者，而不是问答机器。说清楚目的比说清楚步骤更重要。</p>
+</blockquote>
+<hr />
+<h2>六、下一步</h2>
+<ul>
+<li>阅读 <a href="../csf-lite/QUICKSTART.md">QUICKSTART.md</a> 了解完整上手流程</li>
+<li>阅读 <a href="Clarity-使用手册.md">Clarity-使用手册.md</a> 了解 Clarity 桌面工具</li>
+<li>加入知识星球获取帮助和案例分享</li>
+</ul>
+<hr />
+<blockquote>
+<p>有问题？上知识星球提问，或访问 <a href="https://github.com/huidev2025/CSF">https://github.com/huidev2025/CSF</a> 提交 Issue。</p>
+</blockquote></body>
+</html>
