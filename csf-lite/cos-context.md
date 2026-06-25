@@ -1,7 +1,7 @@
 # CONTEXT — 参谋长
 
 > CSF Lite
-> 版本: v1.0 / 创建: （填入创建日期）
+> 版本: v1.0 / 创建: 2026-06-26 / 最后修订: coslog-001
 > © 2025 zhanghui. CC BY-NC 4.0. https://github.com/huidev2025/CSF
 >
 > **首次使用？** 参见 [QUICKSTART.md](QUICKSTART.md)

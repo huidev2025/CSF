@@ -77,3 +77,6 @@ Owner 给出明确任务：
 | 2026-06-26 | `csf-lite-doc/csf发行.jpg` | 新建 | 配图 |
 | 2026-06-26 | `RELEASE.md` | 新建 | 自举包说明 + 三步开始 + 版本历史 |
 | 2026-06-26 | (全部文件) | commit + push | `dc77336` — csf-lite v1.0 正式开源发布 |
+| 2026-06-26 | `安装与配置.html` | 新建 | 带 CSS 样式的图文安装指南，注入煽动力 tagline |
+| 2026-06-26 | `README.md` / `README_en.md` | 更新 | tagline 注入 + 安装页入口 #2 + 编号 1→10 |
+| 2026-06-26 | (全部文件) | commit + push | `006acf4` — HTML 安装页上线 |
