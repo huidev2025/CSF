@@ -42,6 +42,10 @@ See it in Action:
 7. **[cases/bang-v3/ — Excerpts from 375 Sessions](cases/bang-v3/README_en.md)** — Three raw logs demonstrating our 4 concrete proofs (pushback, autonomy, planning, root-cause tracing).
 8. **[cases/paper1/ — Paper Writing: Full Process](cases/paper1/README_en.md)** — 12 dialogue sessions + purpose-driven + paper drafting, revision & submission, using csf-minimal.
 
+Ready for real projects:
+
+9. **[csf-lite/README.md](csf-lite/README.md)** — Production-grade framework with full engine + triplets + protocol library + knowledge base. Copy to your project, tell the AI "Read cos-context", and start.
+
 > **First time here?** Start with **[QUICKSTART.md](QUICKSTART.md)**.
 
 ---
@@ -72,10 +76,22 @@ csf/
 ├── _dlog/                        # Public construction logs (working demonstration)
 ├── cases/                        # Real-world use cases (raw dialogue logs)
 ├── essays/                       # Flagship column ("Working with Intelligence" series + archives)
-└── csf-minimal/                  # Minimal hands-on tutor pack
-    ├── README.md
-    ├── context.md                # Empty template ready for copy-paste
-    └── 体验对比指南.md
+├── csf-minimal/                  # Minimal hands-on tutor pack
+│   ├── README.md
+│   ├── context.md                # Empty template ready for copy-paste
+│   └── 体验对比指南.md
+├── csf-lite/                     # Production-grade framework (engine + triplets + protocols + knowledge)
+│   ├── cos-context.md            # Chief-of-Staff engine
+│   ├── core/                     # Identity kernel & norms
+│   ├── triplets/                 # Triplet files
+│   ├── protocols/                # Operating procedures
+│   └── knowledge/                # Experience library
+├── csf-lite-doc/                 # CSF Lite documentation
+│   ├── 安装与配置.md              # Installation & configuration guide
+│   └── Clarity-使用手册.md        # Clarity desktop tool manual
+├── clarity-dev/                  # Clarity desktop app source (PyQt6, optional companion tool)
+├── csf-clarity/                  # Clarity runtime data (prompts / sections / backups)
+└── RELEASE.md                    # Release notes & self-hosting package guide
 ```
 
 ---
@@ -87,7 +103,7 @@ CSF is not a single document. It is a layered, **third-generation** system:
 | Tier | For Whom |
 |---|---|
 | **csf-minimal** | Anyone, a 5-minute experience |
-| **csf-lite** | Individuals / small teams running real projects |
+| **[csf-lite](csf-lite/README.md)** | Individuals / small teams running real projects. Copy-and-go, AI self-manages. |
 | **csf-full** | SME engineering teams / enterprise-grade adoption |
 
 **What csf-full is**: a working set of about **60 core protocol and experience files** that constitute an **engineering-grade human–AI collaboration management system** — a four-layer architecture (semantic management / collaboration / quality / evolution) + a three-role protocol (Owner / Chief-of-Staff / Developer) + the W-protocol (three tiers of verification) + the E8 experience-promotion pipeline + the D3 knowledge-routing system.
@@ -196,7 +212,7 @@ If you are a decision-maker or engineering leader struggling with runaway RAG co
 - [x] License Selection (CC BY-NC 4.0)
 - [x] Complete contact details (CONTACT.md, Bilingual)
 - [x] Structured hands-on manual ([QUICKSTART.md](QUICKSTART.md), Bilingual)
-- [ ] csf-lite Public teaser
+- [x] csf-lite Public intro ([csf-lite/README.md](csf-lite/README.md))
 - [ ] Industry cases & community feedback
 
 ### What Comes Next

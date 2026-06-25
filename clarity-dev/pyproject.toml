@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "clarity"
+version = "0.1.0"
+description = "Clarity — CSF Lite 桌面应用。独立悬浮窗口，管理提示词/会话上下文/CSF规范。"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "zhanghui", email = "dapangangang@gmail.com"}
+]
+dependencies = [
+    "PyQt6>=6.5",
+    "markdown>=3.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyinstaller>=6.0",
+    "pytest>=7.0",
+]
+
+[project.scripts]
+clarity = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
